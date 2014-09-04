@@ -4,6 +4,4 @@ description: Online Activities for Math 4480 Algebra for Teaching.
 ---
 
 quickQuestions/quickQuestions
-identityInverse
-  identityInverse/identityInversePart1
-  identityInverse/identityInversePart2
+identityInverse/identityInversePart2
