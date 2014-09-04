@@ -1,0 +1,107 @@
+\documentclass{ximera}
+%\documentclass[space,handout,nooutcomes]{ximera}
+
+\title{Identities and Inverses, Part 2}
+
+\begin{document}
+\begin{abstract}
+Identities and inverses arise in lots of different mathematical settings.  In this activity, we aim to see what is the same across these settings.  
+\end{abstract}
+\maketitle
+
+
+%
+%\begin{description}
+%
+%\end{description}
+
+When the objects under consideration are functions, the operation is usually assumed to be function composition.  The open circle symbol, $\circ$, is often used to indicate function composition, so that $f\circ g$  indicates the composition of functions $f$ and $g$.  
+
+When discussing the composition of functions, it is important to be able to talk about particular function values and also about ``functions as whole objects.''  Saying ``f is the squaring function'' is a statement about the whole function, whereas $f(3) = 9$ is a statement about a specific function value.  In general, $f$ is used to indicate the function as a whole, and $f(a)$ indicates the function value for the particular input value $a$.  
+
+Mathematicians and teachers are often sloppy regarding this distinction, allowing $f(x)=x^2$ to be taken as a statement about the whole function, whereas this expression is more appropriately interpreted as a statement about the output value for the particular input value $x$.  To think about the whole function, we think of $x$ not as a particular input value but as all possible input values in the domain.  The whole function, then, is not just the output values but rather the correspondence between the input values and output values.  Thus, if the domain of $f$ is $D$, we may write $f=\{(x,y) | x\in D, y=f(x)\}$.
+  
+To emphasize the point, consider the following expressions:  $f(a)$, $f(x_0)$, and $f(x)$.  I suspect that most mathematicians and teachers almost always interpret the first two as particular output values, because it is customary to use the letter $a$ and the subscripted $x_0$ to denote particular values, considered one at a time, and conceived as ``fixed'' while reasoning through a problem.  Note that there is little sense of ``variable'' in these uses of the letters.  The third expression, on the other hand, is ambiguous, for it sometimes denotes a particular output value yet other times represents the function as a whole.  
+
+Mathematicians occasionally rail at the use of  $f(x)$ for the function as a whole, while others are content that the meaning is usually clear from the context.  When specifying a function, some authors and computer algebra systems avoid the ambiguous ``specification formula'' $f(x)=x^2$ by instead using the notation $f: x\rightarrow x^2$, which can be read, ``$f$ takes $x$ to $x^2$.''
+
+This distinction is likely too subtle when high school students are first learning function notation, because students already have plenty of difficulty with simple uses of the notation.  The distinction can be useful in calculus, however, and it becomes necessary in upper-level undergraduate mathematics courses.  And it is important that teachers understand the distinction because some of their students' difficulties will involve this issue.
+
+The distinction between function values and the function as a whole is useful for talking about function composition.  For example, $f\circ g$ is an expression about functions as whole objects, whereas $f(g(x_0)$ is an expression about function values.  The statement $f\circ g(x) = f(g(x))$ indicates how the two ideas are related.  
+
+At last, we can define identity function.  To keep the discussion within the realm of school mathematics, let's consider only real-valued functions of a real variable.  In other words, both the input and output values are assumed to be real numbers, so that both the domain and the range are subsets of the set of real numbers.  A function $I$ is said to be an identity function if $f\circ I=f$ and $I\circ f = f$ for any function $f$.  Note that these are statements about whole functions.  
+
+\begin{question}
+Describe the similarities and differences between this definition of identity function and your definition of multiplicative identity.  
+\begin{freeResponse}
+It is essentially the same idea, with appropriate substitutions.  Replace function composition with multiplication, $I$ with $1$, and $f$ as any function with $x$ as any number.  
+\end{freeResponse}
+\end{question}
+
+\begin{question}
+Restate the definition of identity function so that it involves statements about function values.  
+\begin{freeResponse}
+One possibility:  $f(I(x)) = f(x)$ and $I(f(x))=f(x)$ for any function $f$.  
+\end{freeResponse}
+\end{question}
+
+\begin{question}
+What is the identity function on the real numbers?  Call it $I$.  
+\begin{freeResponse}
+$I(x)=x$.
+\end{freeResponse}
+\end{question}
+
+\begin{question}
+If the domain of $f$ is $D$, a subset of the real numbers, and the domain of $I$ is all real numbers, what is the domain of $f\circ I$?  What is the domain of  $I\circ f$?  
+\begin{freeResponse}
+The domain of $f\circ I$ is $D$, as is the domain of  $I\circ f$. 
+\end{freeResponse}
+\end{question}
+
+\begin{question}
+Give a definition of \emph{inverse function} that involves statements about whole functions.  
+\begin{freeResponse}
+Given a function $f$, a function $g$ is the inverse of $f$ if $f\circ g = I$ and $g\circ f = I$.  
+\end{freeResponse}
+\end{question}
+
+\begin{question}
+Give a definition of \emph{inverse function} that involves statements about function values.    
+\begin{freeResponse}
+Given a function $f$, a function $g$ is the inverse of $f$ if $f(g(x) = x$ and $g(f(x)) = x$.  
+\end{freeResponse}
+\end{question}
+
+\textbf{A joke.}  After writing two matrices on the board, a professor asks a student, ``Are these matrices inverses?''  The student answers, ``The first one is, and the second one isn't.''  
+
+\begin{question}
+Rewrite the joke as a joke about functions.  
+\begin{freeResponse}
+After writing two functions on the board, a professor asks a student, ``Are these functions inverses?''  The student answers, ``The first one is, and the second one isn't.''  
+\end{freeResponse}
+\end{question}
+
+\begin{question}
+Suppose a function composed with itself is the identity function.  What can you say about the inverse of the function?
+\begin{freeResponse}
+If $f\circ f = I$, then $f$ is its own inverse.  
+\end{freeResponse}
+\end{question}
+
+\begin{question}
+Which elements of $Z_n$ have additive inverses in $Z_n$?  Explain.  
+\begin{freeResponse}
+All elements.  If $\{0, 1, 2, \dots, n-1\}$ are taken as the representative elements of $Z_n$, then the additive inverse of $k$ is $n-k$.  
+\end{freeResponse}
+\end{question}
+
+\begin{question}
+Which elements of $Z_n$ have multiplicative inverses in $Z_n$?  Explain. 
+\begin{freeResponse}
+This is worthy of extended investigation.  
+\end{freeResponse}
+\end{question}
+
+\end{document}
+
