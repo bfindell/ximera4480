@@ -1,4 +1,4 @@
-Ximera Activities for Algebra for Teaching
+Ximera Activities for Math 4480 Algebra for Teaching
 ===========================================================
 
-These activities are for prospective math teachers.
+These activities are for prospective secondary math teachers.
