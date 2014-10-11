@@ -30,10 +30,17 @@ involved four steps:
 \item Defining the meaning of inverse with respect to that operation on those objects. 
 \end{enumerate}
 
-\section*{Functions as Objects}
-In this activity, we explore these ideas for functions.  Thus, \emph{functions are the objects} under consideration.  Thinking of functions as objects can be something of a challenge, however, because much classroom experience  emphasizes formulas and computing particular function values.  
+In this activity, we explore identities and inverses for functions.  
+\begin{remark}
+In the Common Core State Standards (CCSS), the expectations regarding inverses of functions are quite modest for the audience of all students, requiring only that they ``Solve an equation of the form $f(x) = c$ for a simple function $f$ that has an inverse and write an expression for the inverse (F-BF.4.a).''  Students in Precalculus and Calculus need more, of course.  
 
-The Common Core State Standards (CCSS) include the following standards about functions: 
+These notes and questions are intended to help teachers understand these subtle ideas well enough to make wise instructional decisions for both populations of students.   
+\end{remark}
+
+\section*{Functions as Objects}
+To begin our exploration, we first decide that \emph{functions are the objects} under consideration.  Thinking of functions as objects can be something of a challenge, however, because much classroom experience  emphasizes formulas and computing particular function values. 
+
+The CCSS includes the following standards about functions: 
 \begin{itemize}
 \item 8.F.1. Understand that a function is a rule that assigns to each input exactly
 one output. The graph of a function is the set of ordered pairs
@@ -86,14 +93,6 @@ Some mathematicians occasionally rail at the use of  $f(x)$ for the function as 
 
 This distinction and the ``maps to'' notation are likely too subtle when high school students are first learning function notation, because students already have plenty of difficulty with simple uses of the notation.  The distinction can be useful in calculus, however, and it becomes necessary in upper-level undergraduate mathematics courses.  And it is important that teachers understand the distinction because some of their students' difficulties will involve this issue.
 
-%\section*{Examples of Functions}
-%
-%\begin{question}
-%Addition is a binary operation.  How is addition a function?  What are the domain and range?  
-%\begin{freeResponse}
-%
-%\end{freeResponse}
-%\end{question}
 
 \section*{Specifying the Operation}
 Once we consider function to be objects, we can specify an operation for combining such objects.  To reach the goal of discussing inverses of functions, we must agree that \emph{the operation is function composition}.  The open circle symbol, $\circ$, is often used to indicate function composition, so that $f\circ g$  indicates the composition of functions $f$ and $g$, taken as whole objects.  The expression $f(g(x_0))$, in contrast, is about particular function values.  The statement $(f\circ g)(x) = f(g(x))$ indicates how the two ideas are related.  
@@ -137,13 +136,6 @@ $I(x)=x$.
 \end{freeResponse}
 \end{question}
 
-%\begin{question}
-%If the domain of $f$ is $D$, a subset of the real numbers, and the domain of $I$ is all real numbers, what is the domain of $f\circ I$?  What is the domain of  $I\circ f$?  
-%\begin{freeResponse}
-%The domain of $f\circ I$ is $D$, as is the domain of  $I\circ f$. 
-%\end{freeResponse}
-%\end{question}
-
 Before we define the inverse of a function, we must first acknowledge that not all functions have inverses.  We will address this  issue in more detail later in the course.  For now, let's restrict our attention to a particular collection of invertible functions: those that are both one-to-one and onto a domain $D$ that is a subset of $\R$.  
 
 \begin{remark}
@@ -160,6 +152,12 @@ Describe the similarities and differences between this definition of the inverse
 It is essentially the same idea, with appropriate substitutions.  Replace function composition with multiplication, $I$ with $1$, $f$ with $x$, and $g$ (the inverse of $f$) with $y$ (the multiplicative inverse of $x$).  
 \end{freeResponse}
 \end{question}
+
+\begin{remark}
+This analogy between multiplicative inverse and inverse of a function is what is behind the confusing notation $f^{-1}$ for the inverse of a function.  If $a$ is a nonzero real number, then $a^{-1}$ denotes the inverse of $a$ with respect to multiplication.  Similarly, if $f$ is an invertible function, then $f^{-1}$ means the inverse of $f$ with respect to function composition. 
+
+We should apologize to students for the fact that in $\sin^2 x$, the exponent is about multiplication, whereas in $\sin^{-1} x$, the exponent is about function composition.  Because these notations are incompatible, some mathematicians and teachers use the notation $\arcsin x$ instead.  
+\end{remark}
 
 \begin{question}
 Give a definition of \emph{inverse function} that involves statements about function values.    
@@ -186,6 +184,73 @@ Call the function $f$.  Compare the following:  (1) that $f$ composed with itsel
 This is subtle and worth some thought.  
 \end{freeResponse}
 \end{question}
+
+\section*{Examples of Inverses of Functions}
+Addition is a ``binary operation,'' which is to say it takes two numbers (as inputs) and returns their sum (as output).  In other words, addition of real numbers is a function with the domain $\R\times \R$, pairs of real numbers, and the range $\R$.  How, then, 
+should we think about the oft-heard claim that ``Subtraction is the inverse of addition''?  
+
+When considering the expression $5+3$, we can ``undo'' the addition by subtracting 3, and we get back to where we started, which happens to be at 5 but which could have been any number.  In other words, we are thinking of the ``add 3'' function $f:x\mapsto x+3$.  
+\begin{question}
+Use these ideas to determine the inverse of the function $f:x\mapsto x+3$?  Use the definition of inverse function to demonstrate that you are correct.  
+\begin{freeResponse}
+The inverse of $f$ is the the ``subtract 3'' function $g:x\mapsto x-3$.  
+
+Check that $g\circ f=I$ as follows:  $g(f(x))=g(x+3)=(x+3)-3=x$.  
+
+Check that $f\circ g = I$ as follows:  $f(g(x))=f(x-3)=(x-3)+3=x$.  
+
+\end{freeResponse}
+\end{question}
+
+Note the way in which $g$ ``undoes'' or ``reverses'' the effect of $f$.  If we know the output of $f$ was 12, we can compute $g(12)=9$ to know that the input must have been 9.  
+
+\begin{question}
+Suppose $f:x\mapsto 2x-5$.  Use verbal descriptions of $f$ and the idea of ``undoing'' to determine the inverse of $f$.  Explain your reasoning.  
+\begin{freeResponse}
+Think of $f$ as ``multiply by 2 then subtract 5.'' To undo that, we would ``add 5 then divide by 2.''  So $g:x\mapsto \frac{x+5}{2}$ is the inverse of $f$.  
+\end{freeResponse}
+\end{question}
+
+\begin{remark}
+Notice that figuring out the inverse of $f$ does not require that misunderstood procedure that begins by swapping $x$ and $y$.  
+\end{remark}
+
+When someone says that ``Subtraction is the inverse of addition,'' the point is more general than what we have just seen.  We are really talking about a family of addition functions, $f_a:x\mapsto x+a$, where $a$ is a parameter that indicates a particular addition function, each of which has its own inverse, $g_a:x\mapsto x-a$.  We need the following definition:  
+
+\begin{definition}
+A \emph{family of functions} is a parametrized set of related functions.  
+\end{definition}
+
+Much of high school mathematics is organized around particular families of functions, such as linear functions, quadratic functions, exponential functions, or trigonometric functions.  The quadratic functions, for example, are the family $f(x)=ax^2+bx+c$, where $a$, $b$, and $c$ are real numbers and $a\neq 0$.  The parameters $a$, $b$, and $c$, when conceived as ``fixed,'' indicate which particular function we are talking about.  Note that ``trigonometric functions'' are not a family in the sense of the above definition.  
+
+\begin{question}
+In the family of quadratic functions described above, why is it important to state that $a\neq 0$?
+\begin{freeResponse}
+If $a=0$ the function is not quadratic but linear.
+\end{freeResponse}
+\end{question}
+
+The concept of a family of functions is much more varied than the standard families that populate high school mathematics.  For example, in problem-solving situations, it might be useful to consider the family of cubic functions with zeros at 0 and 1, which could be parametrized as $f:x\mapsto ax(x-1)(x-r)$.  
+
+\begin{question}
+Use families of functions to explain the statement ``division is the inverse of multiplication.''  
+\begin{freeResponse}
+Consider the family of ``multiply by $a$'' functions, $f_a:x\mapsto ax$, where $a\neq 0$.  The inverse of $f_a$ is the ``divide by $a$'' function $g:x\mapsto \frac{x}{a}$.   
+\end{freeResponse}
+\end{question}
+
+
+
+%\section*{Examples of Functions}
+%
+%\begin{question}
+%Addition is a binary operation.  How is addition a function?  What are the domain and range?  
+%\begin{freeResponse}
+%
+%\end{freeResponse}
+%\end{question}
+
+
 
 %\section*{Revisiting Some Old Questions}
 %\begin{question}
