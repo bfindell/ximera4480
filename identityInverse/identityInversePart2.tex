@@ -56,10 +56,12 @@ input $x$. The graph of $f$ is the graph of the equation $y = f(x)$.
 \begin{question}
 Write a definition of \emph{function} that you used in an upper-level undergraduate mathematics class.  Explain how your definition is or is not consistent with the above definitions.  
 \begin{freeResponse}
+\begin{hint}
 Possible answer:  For any sets $A$ and $B$, \emph{a function $f$ from $A$ to $B$} is a subset of the Cartesian product $A\times B$ such that
 every $a\in A$ appears exactly once as the first element of an ordered pair $(a,b)$ in $f$. When $(a,b)\in f$, the notation $f(a)$ means the corresponding $b$.  
 
 In the less formal definitions from the CCSS, $A$ is the set of `inputs' or the elements of the domain.  The `outputs' are the elements of the range, which is a subset of $B$.   
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -67,8 +69,10 @@ In the less formal definitions from the CCSS, $A$ is the set of `inputs' or the 
 \begin{question}
 Many students think of function as synonymous with formula.  Describe some advantages to thinking of functions as broader than formulas.
 \begin{freeResponse}
+\begin{hint}
 Possible answer:  In many modeling situations, formulas are not suitable.  For example, suppose $T(n)$ denotes the high temperature 
 at an Arps Hall weather station on the $n^{th}$ day of the year.  
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -76,7 +80,9 @@ at an Arps Hall weather station on the $n^{th}$ day of the year.
 \begin{question}
 Suppose $g$ is a function, $g(3) = 5$ and $1=g(3)+g(a)$.  What can you say about $g(a)$?  What can you say about $a$?  About $g$?
 \begin{freeResponse}
+\begin{hint}
 From the two equations, we can conclude that $g(a)=-4$, but we know nothing else about $a$ and nothing else about $g$.  
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -100,11 +106,13 @@ Once we consider function to be objects, we can specify an operation for combini
 \begin{question}
 Suppose $f: x\mapsto x^2$ and $g: x\mapsto x+3$.  Compute $f\circ g$ and $g\circ f$.  What do you notice?  
 \begin{freeResponse}
+\begin{hint}
 First, $f(g(x))=f(x+3)=(x+3)^2$.  So $f\circ g: x\mapsto (x+3)^2$. 
 
 Second, $g(f(x))=g(x^2)=x^2+3$.  So $g\circ f: x\mapsto x^2+3$. 
 
 Note that $f\circ g \neq g\circ f$, which is to say that function composition is not commutative.  
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -118,21 +126,27 @@ A function $I$ is said to be an \emph{identity function} on a domain $D$ if $f\c
 \begin{question}
 Describe the similarities and differences between this definition of identity function and your definition of multiplicative identity.  
 \begin{freeResponse}
+\begin{hint}
 It is essentially the same idea, with appropriate substitutions.  Replace function composition with multiplication, $I$ with $1$, and $f$ as any function with $x$ as any number.  
+\end{hint}
 \end{freeResponse}
 \end{question}
 
 \begin{question}
 Restate the definition of identity function so that it involves statements about function values.  
 \begin{freeResponse}
+\begin{hint}
 If function $I$ is called the identity function on domain $D$ if $f(I(x)) = f(x)$ and $I(f(x))=f(x)$ for all $x\in D$ and for any function $f$ with domain $D$.  
+\end{hint}
 \end{freeResponse}
 \end{question}
 
 \begin{question}
 What is the identity function on the real numbers?  Call it $I$.  
 \begin{freeResponse}
+\begin{hint}
 $I(x)=x$.
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -149,7 +163,9 @@ Suppose $f:D\rightarrow D$ is one-to-one and onto.  A function $g:D\rightarrow D
 \begin{question}
 Describe the similarities and differences between this definition of the inverse of a function and your definition of multiplicative inverse.  
 \begin{freeResponse}
+\begin{hint}
 It is essentially the same idea, with appropriate substitutions.  Replace function composition with multiplication, $I$ with $1$, $f$ with $x$, and $g$ (the inverse of $f$) with $y$ (the multiplicative inverse of $x$).  
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -162,7 +178,9 @@ We should apologize to students for the fact that in $\sin^2 x$, the exponent is
 \begin{question}
 Give a definition of \emph{inverse function} that involves statements about function values.    
 \begin{freeResponse}
+\begin{hint}
 Given a function $f:D\rightarrow D$, a function $g:D\rightarrow D$ is the inverse of $f$ if $f(g(x)) = x$ and $g(f(x)) = x$ for all $x\in D$.  
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -171,7 +189,9 @@ Given a function $f:D\rightarrow D$, a function $g:D\rightarrow D$ is the invers
 \begin{question}
 Rewrite the joke as a joke about functions.  
 \begin{freeResponse}
+\begin{hint}
 After writing two functions on the board, a professor asks a student, ``Are these functions inverses?''  The student answers, ``The first one is, and the second one isn't.''  
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -181,7 +201,9 @@ Suppose a function composed with itself is the identity function.  What can you 
 Call the function $f$.  Compare the following:  (1) that $f$ composed with itself is the identity function, and (2) the definition of the inverse of $f$.
 \end{hint}
 \begin{freeResponse}
+\begin{hint}
 This is subtle and worth some thought.  
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -193,12 +215,14 @@ When considering the expression $5+3$, we can ``undo'' the addition by subtracti
 \begin{question}
 Use these ideas to determine the inverse of the function $f:x\mapsto x+3$?  Use the definition of inverse function to demonstrate that you are correct.  
 \begin{freeResponse}
+\begin{hint}
 The inverse of $f$ is the the ``subtract 3'' function $g:x\mapsto x-3$.  
 
 Check that $g\circ f=I$ as follows:  $g(f(x))=g(x+3)=(x+3)-3=x$.  
 
 Check that $f\circ g = I$ as follows:  $f(g(x))=f(x-3)=(x-3)+3=x$.  
 
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -207,7 +231,9 @@ Note the way in which $g$ ``undoes'' or ``reverses'' the effect of $f$.  If we k
 \begin{question}
 Suppose $f:x\mapsto 2x-5$.  Use verbal descriptions of $f$ and the idea of ``undoing'' to determine the inverse of $f$.  Explain your reasoning.  
 \begin{freeResponse}
+\begin{hint}
 Think of $f$ as ``multiply by 2 then subtract 5.'' To undo that, we would ``add 5 then divide by 2.''  So $g:x\mapsto \frac{x+5}{2}$ is the inverse of $f$.  
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -226,7 +252,9 @@ Much of high school mathematics is organized around particular families of funct
 \begin{question}
 In the family of quadratic functions described above, why is it important to state that $a\neq 0$?
 \begin{freeResponse}
+\begin{hint}
 If $a=0$ the function is not quadratic but linear.
+\end{hint}
 \end{freeResponse}
 \end{question}
 
@@ -235,7 +263,9 @@ The concept of a family of functions is much more varied than the standard famil
 \begin{question}
 Use families of functions to explain the statement ``division is the inverse of multiplication.''  
 \begin{freeResponse}
+\begin{hint}
 Consider the family of ``multiply by $a$'' functions, $f_a:x\mapsto ax$, where $a\neq 0$.  The inverse of $f_a$ is the ``divide by $a$'' function $g:x\mapsto \frac{x}{a}$.   
+\end{hint}
 \end{freeResponse}
 \end{question}
 
