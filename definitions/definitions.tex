@@ -1,0 +1,134 @@
+\documentclass[space,nooutcomes]{ximera} 
+
+\input{../preamble.tex}
+
+\title{Definitions and Division}
+\author{Brad Findell}
+\begin{document}
+\begin{abstract}
+About the role of definitions in mathematics.  And about division.
+\end{abstract}
+\maketitle
+
+
+%\section*{Activity 3: Definitions and Division \\ \small{Math 4480, Autumn 2020}}
+
+In mathematics courses, you have seen and used many definitions.  But how are definitions used in mathematics, and where do definitions come from?  In mathematical reasoning, definitions are used to determine whether something is an example or non-example of a concept.  This is a fundamental principle of mathematical reasoning, though it is often not taught explicitly.  Think of a definition as a ``touchstone'' that you consult when you want to check your reasoning, but this requires that you ``know the definition.''   What would that mean?  
+\subsection*{Definitions are arbitrary}
+\begin{itemize}
+\item Definitions are choices, and we can choose whatever definition we want.  
+\item Any ``characterization'' of a concept may be chosen as a definition, but in any mathematical exposition only one of them serves as \emph{the} definition.  Why?
+\item For a given concept, if two or more characterizations are equivalent, then they are interchangeable.
+\begin{itemize}
+\item What does this mean?
+\item What is involved in thinking of two characterizations as equivalent? 
+\item What is involved in proving that characterizations are equivalent?  
+\end{itemize}
+\item For a given concept, characterizations that are not equivalent can produce different answers to important questions.
+\item Pay careful attention to the ``domain'' of a definition.  What does this mean?  
+\item Definitions can be ``extended'' to larger domains, and the guiding principle is to maintain as many properties as possible. Sometimes extending a definition requires choosing to maintain one property at the expense of other properties.  
+\end{itemize}
+
+\subsection*{Definitions are not arbitrary}
+\begin{itemize}
+\item When working with other people, we often choose the same (or equivalent) definitions.  Why?  
+\item The definition of a concept should include everything that we want to include and nothing that we do not want to include.  If this fails, we need a better definition.  
+\item Definitions should make useful distinctions.  For example, if a definition of \emph{even} implies that all numbers are even, then the definition is not useful.
+\item Definitions should require few (if any) ``special cases.''  
+\end{itemize}
+
+\subsection*{Investigations}
+As you consider the following problems, be explicit about the meanings and definitions of the key terms and symbols you use.  When there is a choice to make, consider the advantages and disadvantages of each choice.  And be ready to provide a rationale for the definition you choose.  
+
+\begin{problem}
+Is 1 a prime number?  Suggestions for exploration:  
+\begin{itemize}
+\item What is the definition of \emph{prime}?  
+\item Think about the prime factorization of a number.  In what sense is its prime factorization unique?  
+\end{itemize}
+\end{problem}
+
+\begin{problem}
+Is 0 even, odd, neither, or both?  Suggestions for exploration:  
+\begin{itemize}
+\item Consider various ways of thinking about even and odd.  Try to extend each of those ways of thinking, if possible, to include 0 and to include negative integers.     
+\item Students have a very strong sense that 0 is not a number or that it is a special case that is often excluded.  Would it make sense to extend the concepts to include negative integers but not 0?  Consider consequences for theorems such as ``the sum of two even numbers is even.''
+\item Can you extend your definitions of even and odd to the rational numbers?  Explain.  
+\end{itemize}
+\end{problem}
+
+\begin{problem}
+Is $\sqrt{4}=\pm 2$?  Suggestions for exploration:  
+\begin{itemize} 
+\item Consider the values of expressions such as $\sqrt{9}+\sqrt{16}$?  
+\item What does your calculator say?  
+\item What could the radical symbol mean?  How would you define it?  
+\item Is it reasonable to talk about ``the square root function?''  If so, what are its domain and range? 
+\item What about the ``symbols'' $\sqrt{-3}$ and $\sqrt[3]{6}$ in $\Z_7$?  
+\end{itemize}
+\end{problem}
+
+\begin{problem}
+When asked to fill in the box in  $8 + 3 = \Box + 5$, many students write 11.  Why?  What in students' experience might cause this?  What is it that these students are not understanding about the meaning of the equals sign?  How might this misunderstanding complicate students' learning of algebra?  
+\end{problem}
+
+\subsection*{Division}
+There are many ways to think about division.  Here are three:
+
+\paragraph{Division as multiplication}  I know that $42\div 6=7$ because $6\times 7=42$.  To figure this out, I asked myself what number could go in the box in $6\times \Box =42$.  In algebra, this is like solving the equation $6x=42$.
+
+\paragraph{Division as sharing}  To compute $42\div 6$, I can imagine sharing 42 cookies among 6 people, and I can see that each person would get 7 cookies.  I could model this with cookies, blocks, or chips.  A more general way to ask the question is to ask, ``If 42 cookies is 6 groups, how many are in one group?''  The answer is 7 cookies (i.e., one group is 7 cookies) because 6 portions of 7 cookies each is 42 cookies in all.  
+
+\paragraph{Division as measurement}  To compute  $42\div 6$, I can imagining measuring 42 cookies into bags of 6 cookies each.  In other words, I can ask, ``If each group has 6 cookies, how many groups can be made from 42 cookies?''  The answer is 7 groups  because 7 groups of 6 cookies each would be 42 cookies in all.   
+
+\begin{problem}
+When dividing by a fraction, why is correct to invert and multiply?  Suggestions for exploration: 
+\begin{itemize}
+\item Use each of the meanings of division to construct an explanation.  
+\item When adding fractions, we use common denominators.  When dividing fractions would it be okay to get a common denominator and then just take the quotient of the numerators?  Explain why or why not.  
+\item When multiplying fractions, we ``multiply straight across.''  When dividing fractions, would it be okay to ``divide straight across?''  Explain why or why not.  
+\end{itemize}
+\end{problem}
+
+\begin{problem}
+What is $0/0$?  What is $2/0$?  What is $0/2$?  Provide at least three explanations based on different meanings for division.  
+\end{problem}
+
+\subsection*{Exponents}
+Just as elementary school students need to use their understanding of counting numbers to build an understanding of 0, negative integers, rational, and real numbers, high school students need to use their understanding of counting number exponents to build an understanding of integer, rational, and real exponents.  In both cases, the guiding principle is that the key rules that work for counting numbers should continue to work in the extended system.
+
+\begin{problem}
+Without using technology, graph $a^x$, for values such as $a = 2, 4, 1, -2, 1/2$, and $0$.  Make a table of values for $a^x$.  Be sure to include some negative, zero, and non-integer exponents.  Plot the points, and sketch the graph.  Can you connect the dots?  Explain.  
+\end{problem}
+
+\begin{problem}
+Students sometimes say that $a^n$ means ``$a$ multiplied by itself $n$ times.''  Considering only counting-number exponents, is this correct?  If needed, write a better definition for the meaning of $a^n$, where $n$ is a counting number.
+\end{problem}
+
+\begin{problem}
+Use your definition to explain the rules for $a^ma^n$, $a^n/a^m$, and $(a^n)^m$.  You may use specific values as illustrations, but be sure to explain generally.  Indicate the values of the base, $a$, and of the exponents for which your explanation holds.  And be sure to explain why the bases need to be the same.  
+\end{problem}
+
+\begin{problem}
+In order for the exponent rules to continue to hold when you extend to whole-number exponents, what can you say about $a^0$?  Provide two explanations.  Note that you are defining $a^0$ (extending the definition of exponent) as well as giving an argument for why the definition makes sense.  Note also that your explanations cannot make use of negative exponents because they have not yet been defined.  In your explanations, be sure to indicate any restrictions on $a$.  
+\end{problem}
+
+\begin{problem}
+In order for the exponent rules to continue to hold when you extend to integer exponents, what can you say about $a^{-n}$?  Provide two explanations.  Again, note any restrictions on $a$.
+\end{problem}
+
+\begin{problem}
+Extend your definition to rational exponents.  Again provide an argument for why the definition makes sense.  Indicate any restrictions on $a$.
+\end{problem}
+
+\subsection*{Functions}
+
+\begin{problem}
+Suppose $f$ is a function on the real numbers such that the composition of $f$ with itself is the identity function.  
+\begin{enumerate}
+\item Does the identity function itself satisfy this criterion?  Explain.  
+\item Find three different families of functions $f$ that satisfy this criterion.  
+\end{enumerate}
+\end{problem}
+
+\end{document}

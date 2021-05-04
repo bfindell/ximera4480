@@ -1,0 +1,142 @@
+\documentclass[nooutcomes,noauthor]{ximera}
+
+\input{../preamble.tex}
+
+
+\title{Combinatorics}
+\author{Bart Snapp \and Brad Findell}	
+\begin{document}
+\begin{abstract}
+In this activity we investigate and explain ideas about counting (aka combinatorics).
+\end{abstract}
+\maketitle
+
+% Math 4480:  Autumn 2020
+
+\begin{problem}
+Solve two of problems (a) through (e) as well as problem (f).  Be sure to explain how you know you have found all possibilities. And describe any connections you see among the problems you solve.
+\begin{enumerate}
+\item I have pennies, nickels, and dimes in my pocket.  If I choose four coins, how much money can I have?
+\item For the equation $a + b + c = 4$, find the number of solutions that are whole numbers.
+\item Find the number of monomials of degree 4 on the letters $x$, $y$, and $z$.  
+\item How many terms are there in the expansion of $(x + y + z)^4$?
+%\item Suppose four golden goblets were carried to the New World on Columbus's ships the Nina, the Pinta, and the Santa Maria.  In how many ways could this have been done?
+\item Suppose Alvin, Simon, and Theodore have four acorns among them.  In how many ways could the acorns be distributed?  
+\item On the north side of Euler Street, there are six lots.  Four of these are to be chosen for development, but two must remain undeveloped.  In how many ways could this be done?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Find all possible rectangles with area 24 and whole-number side lengths.  How do you know that you have them all?
+\end{problem}
+
+\begin{problem}
+Find all possible right rectangular prisms with volume 24 and whole-number side lengths.  How do you know that you have them all?  
+\end{problem}
+
+\begin{problem}
+How many factors does 24 have?  How many factors does 13 have?  How many factors does 49 have?  How many factors does 465696 have?
+\end{problem}
+
+\begin{problem} 
+Suppose Steve is driving down a road with three traffic lights that are either red or green.  (For this problem, we will suppose there are no yellow lights.)
+
+\begin{enumerate}
+\item If there are three lights, how many ways could he see one red light and two green lights?
+\item If there are four lights, how many ways could he see one green light and three red lights?  
+\item If there are four lights, how many ways could he see all red lights?  
+
+ \item In the following chart let $n$ be the number of traffic lights and $k$ be  the number of green lights seen. In each square, write the number of ways this number of green lights could be seen while Steve drives down the street.
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|}
+    \hline
+          & k=0 & k=1 & k=2 & k=3 & k=4 & k=5 & k = 6\\
+    \hline
+    n=0 &\rule[0mm]{0mm}{7mm}&       &       &       &       &   &   \\
+    \hline
+    n=1 &\rule[0mm]{0mm}{7mm}  &       &       &       &       &   &   \\
+    \hline
+    n=2 & \rule[0mm]{0mm}{7mm} &     &     &       &       &    &  \\
+    \hline
+    n=3 &\rule[0mm]{0mm}{7mm}       &       &       &       &       &   &   \\
+    \hline
+    n=4 & \rule[0mm]{0mm}{7mm}      &       &       &       &       &   &   \\
+    \hline
+    n=5 &\rule[0mm]{0mm}{7mm}       &       &       &       &       &   &   \\
+    \hline
+    n=6 &\rule[0mm]{0mm}{7mm}       &       &       &       &       &   &   \\
+    \hline
+\end{array}
+\]
+\item Describe any patterns you see in your table and try to explain them in terms of traffic lights.
+\end{enumerate}
+
+\end{problem}
+
+\begin{problem}
+Using the meaning of $\binom{n}{k}$ as the number of ways of choosing $k$ objects from $n$ available objects, explain why $\binom{n}{k} = \binom{n}{n-k}$.  (If you use specific numbers in your explanation, be sure to describe how the result is general.)  How can you ``see'' this fact in Pascal's Triangle?  
+\end{problem}
+
+\begin{problem}
+Use the meaning of $\binom{n}{k}$ to explain why the sum of $\binom{n}{k}$, from $k=0$ to $k=n$ is $2^n$.
+\end{problem}
+
+\begin{problem}
+Pascal claims:
+\[
+\binom{n}{k-1} +  \binom{n}{k} = \binom{n+1}{k}
+\]
+Explain how this single equation basically encapsulates the key
+to constructing Pascal's triangle.
+\end{problem}
+
+\begin{problem}
+Consider the equation:  
+\[
+\binom{n}{k-1} +  \binom{n}{k} = \binom{n+1}{k}
+\]
+Based on the traffic light context, use the specific case of $n=6$ and $k=3$ to explain this formula generally.  
+\end{problem}
+
+\begin{problem}
+Suppose that an oracle tells you that
+\[
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+\]
+\begin{enumerate}
+\item Explain why this formula makes sense for the number of ways of choosing $3$ objects from $6$ available objects.  
+\item Now explain why the formula makes sense generally.  
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+The Binomial Theorem states that for $n$ a nonnegative integer, 
+\[
+(a+b)^n = \binom{n}{0} a^nb^0 + \binom{n}{1} a^{n-1}b^1 + \dots + \binom{n}{n-1} a^{1}b^{n-1} + \binom{n}{n} a^{0}b^n.   
+\]
+Using the meaning of $\binom{n}{k}$ as the number of ways of choosing $k$ objects from $n$ available objects, explain 
+why the coefficient of $a^3b^4$ in $(a+b)^7$ is $\binom{7}{4}$.  
+\end{problem}
+
+\begin{problem}
+Make a conjecture about the following sum and prove it.  
+\[
+\binom{n}{0} + \binom{n}{1} + \binom{n}{2} + \dots + \binom{n}{n-1}  + \binom{n}{n} 
+\]
+\end{problem}
+
+\begin{problem}
+Make a conjecture about the following alternating sum and prove it.  
+\[
+\binom{n}{0} - \binom{n}{1} + \binom{n}{2} - \dots +  (-1)^n\binom{n}{n} 
+\]
+\end{problem}
+
+\begin{problem}
+A pizza shop always puts cheese on their pizzas.  If the shop offers
+$n$ additional toppings, how many different pizzas can be ordered?  
+(Note: A plain cheese pizza is an option.)
+\end{problem}
+
+\end{document}

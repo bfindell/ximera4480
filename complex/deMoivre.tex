@@ -1,0 +1,110 @@
+\documentclass[space,nooutcomes]{ximera} 
+
+\input{../preamble.tex}
+
+\title{DeMoivre's Theorem}
+\author{Brad Findell}
+\begin{document}
+\begin{abstract}
+Problems exploring DeMoivre's Theorem.   
+\end{abstract}
+\maketitle
+
+
+
+%The notation cis theta is shorthand for  
+
+You have seen Euler's formula: $e^{i\theta}=\cos\theta +i\sin\theta$, which can be derived from the Taylor series for $e^{x}$, $\cos x$, and $\sin x$ by separating the real and imaginary parts of $e^{i\theta}$.  Note that because 
+$\cos^2\theta+\sin^2\theta=1$, the complex number $\cos\theta +i\sin\theta$ lies on the 
+unit circle in the complex plane.  More generally, any complex number $a+bi$ can be expressed as $r(\cos\theta +i\sin\theta)$, with $r\ge 0$.  
+
+Thinking of the complex plane as ordered pairs of real numbers, the number $a+bi$ can be represented as the point $(a,b)$ or as a vector from the origin to
+$(a,b)$.  If $a+bi = r(\cos\theta +i\sin\theta)$, for real numbers $a$, $b$, $r$, and $\theta$, then we say that the complex number has rectangular coordinates $(a,b)$ and polar coordinates $(r;\theta)$. We call $r$ the magnitude and $\theta$ the angle (or argument) of the complex number. Practice converting among these forms, particularly for special angles.
+
+%\begin{problem}
+%Use the angle addition identity to prove DeMoivre's theorem:  .
+%\end{problem}
+
+\begin{problem}
+From the algebra of exponents, it is clear that 
+\[
+e^{i\alpha}e^{i\beta}=e^{i(\alpha + \beta)} 
+\]
+With Euler's formula, this identity implies that 
+\[
+r_1(\cos\alpha + i\sin\alpha)r_2(\cos\beta + i\sin\beta)
+=r_1 r_2\left(\cos(\alpha+\beta) + i\sin(\alpha+\beta)\right), 
+\]
+which is to say the following:  
+\begin{quote}
+When multiplying complex numbers, simply multiply their magnitudes and add their angles (arguments).  
+\end{quote}
+\end{problem}
+
+\begin{problem}
+Multiply $a + bi$ times $c + di$ for the special case when $a=\cos\alpha$, $b=\sin\alpha$, 
+$c=\cos\beta$, $d=\sin\beta$.  Explain how this idea could help you reconstruct certain trigonometry formulas, if you had forgotten them.  
+
+Explain, alternatively, how you could use your knowledge of trigonometry to prove the angle-addition property of complex multiplication.  
+\end{problem}
+
+%
+%\begin{problem}
+%Prove the zero product property for complex numbers.  Give an example of a number system in which the zero product property does not hold.
+%\vfill 
+%\end{problem}
+%
+Let's step back for a moment to see whether we can generate the same understanding about complex multiplication without Euler's formula---and without trigonometry.  
+\begin{problem}
+Prove that multiplying by a complex number $w = a + bi$ is a composition of a rotation and a dilation and specify both the angle of rotation and the dilation factor.  Hints: For a generic complex number $z$, how do $za$ and $zbi$ relate to $z$?  How does $zw$ relate to $za$ and $zbi$?  
+\end{problem}
+
+\begin{problem}
+Prove:  $(\cos\theta + i\sin\theta)^2=\cos 2\theta + i\sin 2\theta$.  Describe the formula in words.    
+\end{problem}
+
+\begin{problem}
+Prove DeMoivre's Theorem:  $(\cos\theta + i\sin\theta)^n=\cos n\theta + i\sin n\theta$, for $n=1, 2, \dots$.  Hint: Use mathematical induction on $n$. 
+\end{problem}
+
+\subsection{Finding roots}
+DeMoivre's theorem is often used to find roots of complex numbers.  
+To derive the formula, observe first that, in polar form, complex numbers are not uniquely identified.  In particular, 
+\[
+\cos\theta + i\sin\theta =\cos (\theta+2k\pi) + i\sin (\theta+2k\pi), 
+\]
+for any integer $k$. Thus, by DeMoivre's theorem:  
+\begin{align*}
+\left[ \cos \left(\frac{\theta+2k\pi}{n}\right) 
++ i\sin \left(\frac{\theta+2k\pi}{n}\right) \right]^n 
+&= \cos (\theta+2k\pi) + i\sin (\theta+2k\pi) \\
+&= (\cos\theta + i\sin\theta), 
+\end{align*}
+which means that 
+\[
+\cos \left(\frac{\theta+2k\pi}{n}\right) 
++ i\sin \left(\frac{\theta+2k\pi}{n}\right)
+\]
+is an $n^\text{th}$ root of $(\cos\theta + i\sin\theta)$ for any integer $k$.  To ensure that these $n^\text{th}$ roots are distinct, we typically choose $k= 0, 1, \dots, n-1$.  This approach works for any complex number on the unit circle.  
+
+Now we generalize this approach to find the $n^\text{th}$ roots any non-zero complex number $z=r(\cos\theta + i\sin\theta)$, where $r>0$.  Because $r$ is a positive real number, it has exactly one positive real $n^\text{th}$ root, called its ``principal $n^\text{th}$ root,'' which we can then unambiguously denote as $\sqrt[n]{r}$ or as $r^{1/n}$.  Then the $n$ distinct $n^\text{th}$ roots of $z$ are as follows: 
+\[
+\sqrt[n]{r}\left[\cos \left(\frac{\theta+2k\pi}{n}\right) 
++ i\sin \left(\frac{\theta+2k\pi}{n}\right)\right], \text{ for } k= 0, 1, \dots, n-1. 
+\]
+Notice that this means that the $n$ roots are neatly arranged on a circle of radius 
+$\sqrt[n]{r}$, separated by a uniform angle of $\frac{2\pi}{n}$ radians.  
+
+\begin{problem}
+Use DeMoivre's Theorem to find: 
+\begin{enumerate}
+\item The $5^\text{th}$ roots 1.  
+\item The $4^\text{th}$ roots $i$.  
+\item The $3^\text{rd}$ roots $-8i$.  
+\end{enumerate}
+Note: You may express your answers in either radians or degrees.  
+\end{problem}
+
+
+
+\end{document}

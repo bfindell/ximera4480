@@ -1,0 +1,70 @@
+\documentclass[space,nooutcomes]{ximera} 
+
+\input{../preamble.tex}
+
+\title{Integer Arithmetic}
+\author{Brad Findell}
+\begin{document}
+\begin{abstract}
+Exploring arithmetic of integers.  
+\end{abstract}
+\maketitle
+
+
+To explain integer arithmetic, here are some ideas: 
+\begin{enumerate}
+\item Patterns
+\item Fact families
+\item Algebraic reasoning
+\item Models, red and black chips, walking on a number line, checks and bills, etc. 
+\end{enumerate}
+
+
+\section*{Integers as Directed Segments}
+
+Integers $4$ and $-3$ as points: 
+
+  \begin{tikzpicture}
+    \draw[<->, line width=.75pt] (-5.5,0) -- (5.5,0);
+    \foreach \i in {-5,-4,...,5} % numbers on line
+      \draw (\i,0.1) -- + (0,-0.2) node[below] {\normalsize $\i$}; % tick and their labels
+	\fill[red] (-3,0) circle (0.6 mm);
+	\fill[blue] (4,0) circle (0.6 mm);
+  \end{tikzpicture}
+  
+Integers $4$ and $-3$ as vectors: 
+
+    \begin{tikzpicture}
+    \draw[<->, line width=.75pt] (-5.5,0) -- (5.5,0);
+    \foreach \i in {-5,-4,...,5} % numbers on line
+      \draw (\i,0.1) -- + (0,-0.2) node[below] {\normalsize $\i$}; % tick and their labels
+	\draw[red, ->, line width=1.25pt] (0,0) -- (-3,0);
+	\draw[blue, ->, line width=1.25pt] (0,0) -- (4,0);
+   \end{tikzpicture}
+   
+Integer sum, $4 + -3$ as point + vector:  
+
+    \begin{tikzpicture}
+    \draw[<->, line width=.75pt] (-5.5,0) -- (5.5,0);
+    \foreach \i in {-5,-4,...,5} % numbers on line
+      \draw (\i,0.1) -- + (0,-0.2) node[below] {\normalsize $\i$}; % tick and their labels
+	\fill[blue] (4,0) circle (0.6 mm);
+	\draw[red, ->, line width=1.25pt] (4,0) -- (1,0);
+   \end{tikzpicture}
+
+Integer sum, $4 + -3$ as vector + vector:  
+
+    \begin{tikzpicture}
+    \draw[<->, line width=.75pt] (-5.5,0) -- (5.5,0);
+    \foreach \i in {-5,-4,...,5} % numbers on line
+      \draw (\i,0.1) -- + (0,-0.2) node[below] {\normalsize $\i$}; % tick and their labels
+	\draw[blue, ->, line width=1.25pt] (0,0) -- (4,0);
+ 	\draw[red, ->, line width=1.25pt] (4,0.1) -- (1,0.1);
+   \end{tikzpicture}
+
+\dots and we can think of the sum as a point or as a vector.  
+
+
+
+
+\end{document}

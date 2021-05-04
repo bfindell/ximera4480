@@ -1,0 +1,74 @@
+\documentclass[space,nooutcomes]{ximera} 
+
+\input{../preamble.tex}
+
+\title{More Modular Arithmetic (draft)}
+\author{Brad Findell}
+\begin{document}
+\begin{abstract}
+More activities in modular arithmetic.  
+\end{abstract}
+\maketitle
+
+
+Modular arithmetic is usually described informally as ``clock arithmetic'' or as ``arithmetic of remainders.''  The system is constructed formally as equivalence classes of integers,   In both cases, there are no points ``between'' consecutive numbers, such as 0 and 1.  
+
+\subsection*{Background}
+\paragraph{Division Theorem} Given integers $a$ and $b$ with $b\neq 0$, there exist unique integers $q$ (the quotient) and $r$ (the remainder) such that $a = bq + r$, with $0 \leq r < b$.
+ 
+\paragraph{Definition of Modular Arithmetic}  Let $n$, $a$, and $b$ be integers, with $n > 0$.  Then $a$ and $b$ are congruent modulo $n$, written $a\equiv b\pmod{n}$, if $n$ divides the difference $a-b$, that is, if there exists an integer $k$ such that $a-b = kn$.
+  
+Examples:  
+$$15\equiv 3 \pmod{4}$$
+
+$$7\equiv  22 \pmod{5}$$
+
+\paragraph{Theorem 1}
+For integers $a$ and $b$, $a\equiv b \pmod{n}$ if and only if $a$ and $b$ have the same nonnegative remainder after dividing by $n$.
+
+\paragraph{Theorem 2}
+Let $a, b, c, d, k$ and $n$ be integers with $k>1$ and $n > 1$.
+\begin{enumerate}%[(a)]
+\item $a\equiv a \pmod{n}$
+\item If $a\equiv b \pmod{n}$, then $b\equiv a \pmod{n}$.  
+\item If $a\equiv b \pmod{n}$ and $b\equiv c \pmod{n}$, then $a\equiv c \pmod{n}$.
+\item If $a\equiv b \pmod{n}$ and $c\equiv d \pmod{n}$, then $a+c\equiv b+d \pmod{n}$ and $ac\equiv bd \pmod{n}$
+\item If $a\equiv b \pmod{n}$, then $a^k\equiv b^k \pmod{n}$
+\end{enumerate}
+
+\subsection*{Problems}
+
+\begin{problem}
+Most adults know divisibility rules for 2, 5, and 10.  Some adults know divisibility rules for 3, 4, 9, and even 11.  For $n = 2^k, 3, 5^k, 6, 9$, and $11$, where $k$ is a counting number, generalize the divisibility rules so that they are ``remainder rules'' for finding remainders modulo $n$.
+\end{problem}
+
+\begin{problem}
+Prove your remainder rule works for finding remainders modulo $4$.  
+\end{problem}
+
+\begin{problem}
+Prove your remainder rule works for finding remainders modulo $9$.  
+\end{problem}
+
+\begin{problem}
+Prove Theorem 1 above.
+\end{problem}
+
+\begin{problem}
+Prove Theorem 2 above. 
+\end{problem}
+
+\begin{problem}
+Explain how Theorem 2 establishes that ``equivalence mod $n$'' is indeed an equivalence relation. 
+\end{problem}
+
+\begin{problem}
+Explain how Theorem 2 establishes that the operations of addition, multiplication, and exponentiation are ``well defined.''
+\end{problem}
+
+\begin{problem}
+Which numbers have multiplicative inverses mod $n$?  What does it mean to be a multiplicative inverse?  
+\end{problem}
+
+
+\end{document}

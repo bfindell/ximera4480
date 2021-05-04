@@ -1,0 +1,262 @@
+\documentclass[space,nooutcomes]{ximera} 
+
+\input{../preamble.tex}
+
+\title{Complex Numbers (draft)}
+\author{Brad Findell}
+\begin{document}
+\begin{abstract}
+Problems exploring complex numbers.   
+\end{abstract}
+\maketitle
+
+
+\begin{problem}
+Find all complex solutions to each of the following equations: 
+\[
+x^3=1 \qquad x^4=1 \qquad x^6 = 1 \qquad x^8 = 1
+\]
+\vfill
+\end{problem}
+\newpage 
+
+\begin{problem}
+Let $\omega=-\tfrac{1}{2}+\tfrac{\sqrt{3}}{2}i$.  Compute $w^n$, for $n = -2, -1, 0, 1, 2, 3, 4$, and $134$.  
+\vfill
+\end{problem}
+
+\begin{problem} % Need the rest of alpha
+Let $\alpha=\tfrac{\sqrt{2}}{2}+\tfrac{\sqrt{2}}{2}i$ Compute $\alpha^n$ for $n = -1, 0, 1, 2, 3, 4, 5$, and $143$.  
+\vfill
+\end{problem}
+
+\begin{problem}
+Describe where and how you see modular arithmetic in the previous problems.
+\vfill
+\end{problem}
+
+\newpage
+
+\begin{problem}
+Assuming that $x$ and $y$ are real numbers, explain why the product $(x+iy)(x-iy)$ is always a nonnegative real number. 
+\vfill
+\end{problem}
+
+%The notation cis theta is shorthand for  
+
+You have seen Euler's formula: $e^{i\theta}=\cos\theta +i\sin\theta$.  Any complex number $a+bi$ can be expressed as $r(\cos\theta +i\sin\theta)$.  Thinking of the complex plane as ordered pairs of real numbers, the number $a+bi$ can be represented as the point $(a,b)$ or as a vector from the origin to
+$(a,b)$.  If $a+bi = r(\cos\theta +i\sin\theta)$, for real numbers $a$, $b$, $r$, and $\theta$, then we say that the complex number has rectangular coordinates $(a,b)$ and polar coordinates $(r;\theta)$.  Practice converting among these forms, particularly for special angles.
+
+
+\begin{problem}
+Convert the following complex numbers to polar form: $i$, $1 + i$,  $-3$, $2 - 2i$, $-\sqrt{3}-i$, $2 - 3i$, $-4 + 6i$.  
+\vfill 
+\end{problem}
+
+\begin{problem}
+Convert the following complex numbers to rectangular form: $(2; 30)$, $(1; 135^\circ)$, 
+$(3; 240^\circ)$, $(5; 27^\circ)$.  
+\vfill 
+\end{problem}
+
+\newpage 
+
+\begin{problem}
+Write $3 + 4i$, $1 + i$, and their product in polar form.  What do you notice?  
+\vfill 
+\end{problem}
+
+\begin{problem}
+Write $(1 + i)^8$ in standard $a + bi$ form.  
+\vfill 
+\end{problem}
+
+\begin{problem}
+Choose a point in the complex plane, and find four different ways of using polar coordinates to describe it, using angles between $-2\pi$ and $2\pi$.  
+Do polar coordinates uniquely label a point in the plane?
+Do rectangular coordinates uniquely label a point in the plane?
+\vfill 
+\end{problem}
+
+\newpage 
+
+
+Given a complex number $z=a+bi$, the absolute value of $z$ (also called the modulus of $z$) is given by $|z|=\sqrt{a^2+b^2}$.  The conjugate of $z$, denoted $\bar{z}$, is $a-bi$.  When a complex number is given in polar coordinates, the angle is sometimes called the argument of $z$, and it is common to choose $-\pi<\arg(z)\le \pi$.  
+
+\begin{problem}
+If you think of $z$ as a vector from the origin, what is a geometric interpretation of $|z|$?  
+\vfill 
+\end{problem}
+
+\begin{problem}
+How does $|z+w|$ relate to $|z|$ and $|w|$?  Explain.  
+\vfill 
+\end{problem}
+
+\begin{problem}
+What can you say about $\bar{zw}$, $\bar{z+w}$, and $z\bar{z}$?  How do they relate to $z$, $w$, $\bar{z}$ and $\bar{w}$?
+\vfill 
+\end{problem}
+
+\begin{problem}
+Given a complex number $z$ on the unit circle, find $\bar{z}$, $z^{-1}$, $z\bar{z}$, $z+\bar{z}$, and $z-\bar{z}$.  How do your answers change if $z$ is not on the unit circle?
+\vfill 
+\end{problem}
+
+%\begin{problem}
+%Use the angle addition identity to prove DeMoivre's theorem:  .
+%\end{problem}
+
+\newpage 
+
+
+\begin{problem}
+Multiply $a + bi$ times $c + di$ for the special case when $a=\cos\alpha$, $b=\sin\alpha$, 
+$c=\cos\beta$, $d=\sin\beta$.  Use your result to prove the angle-addition property of complex multiplication.  Explain how this idea could help you reconstruct certain formulas.  
+\vfill 
+\end{problem}
+
+%\begin{problem}
+%Use your calculator to compute \cis 72 + \cis 144 + \cis 216 + \cis 288 + \cis 360 .
+%\end{problem}
+%
+\begin{problem}
+Use long division to simplify $\frac{x^{43}-1}{x-1}$.
+\vfill 
+\end{problem}
+
+\begin{problem}
+Simplify $a+ar+ar^2+\dots+ar^{n-1}$.  (Write it without dots.)
+\vfill 
+\end{problem}
+
+\newpage 
+
+
+A solution to the equation $x^n=1$ is called an $n^\text{th}$  root of unity.  If $x$ is an $n^\text{th}$ root of unity and $x^k\ne 1$ for all integers $k$, $0<k<n$, then $x$ is called a primitive $n^\text{th}$ root of unity.  
+
+\begin{problem}
+Use DeMoivre's Theorem to find a primitive $5^\text{th}$ root of unity.  Call it $x$, and compute $1+x+x^2+x^3+x^4$. Find a geometric explanation for your result.  
+\vfill 
+\end{problem}
+
+\begin{problem}
+If $z = a + bi$ (with $b$ not $0$) is a primitive $n^\text{th}$ root of unity, then is the conjugate of $z$ also a primitive $n^\text{th}$ root of unity?  Make a conjecture and prove it.
+\vfill 
+\end{problem}
+
+\begin{problem}
+Find all the primitive $n^\text{th}$ roots of unity for $n = 2, 3, 4, 5, 6, 7, 8, 9$, and $10$.  Be sure that you are able to demonstrate that each root is actually a primitive $n^\text{th}$ root of unity and also that you have found them all.  
+\vfill 
+\end{problem}
+
+\newpage 
+
+
+\begin{problem}
+Describe (geometrically) the following transformations of the complex plane: 
+\begin{enumerate}
+\item Multiplication by $3$. 
+\item Multiplication by $-1$. 
+\item Addition of $2 + i$. 
+\item Subtraction of $1 + 2i$.  
+\item Multiplication by $i$. 
+\item Complex conjugation. 
+\item Multiplication by $1/2$.  
+\end{enumerate}
+\vfill 
+\end{problem}
+
+\begin{problem}
+Describe how addition of $a + bi$ transforms the plane, and include the special cases that you described in a previous problem.
+\vfill 
+\end{problem}
+
+\begin{problem}
+Describe how multiplication by $r$ transforms the plane, when $r > 0$, and include the special cases that you described in a previous problem.  
+\vfill 
+\end{problem}
+
+\newpage 
+
+
+\begin{problem}
+Describe how multiplication by $\cos\theta + i\sin\theta$ transforms the plane, and include the special cases that you described in a previous problem.
+\vfill 
+\end{problem}
+
+\begin{problem}
+How does $|zw|$ relate to $|z|$ and $|w|$?  
+\vfill 
+\end{problem}
+
+\begin{problem}
+Calculate $\sqrt{5+12i}$.  (Hint: Call it $a + bi$.)  
+\vfill 
+\end{problem}
+
+\begin{problem}
+Prove the zero product property for complex numbers.  Give an example of a number system in which the zero product property does not hold.
+\vfill 
+\end{problem}
+
+\newpage 
+
+
+\begin{problem}
+Prove without calculation that $(a+bi)/(a-bi)$ always has absolute value 1.  
+\vfill 
+\end{problem}
+
+%\begin{problem}
+%Interpret the angle of the complex number (z_1 - z_2 )/(z_1 - z_3).
+%\end{problem}
+%
+%\begin{problem}
+%Use absolute value to write an equation of a circle with center $z_0$ and radius $r$ in the complex plane. 
+%\end{problem}
+%
+%\begin{problem}
+%Given a complex number $z=a+bi$, the real part of $z$ is $a$, and the imaginary part is $b$.  We abbreviate these statements by writing $Re(z) = a$ and $Im(z) = b$.  Write formulas in terms of $z$ and $\bar{z}$ for Re(z) and Im(z).  
+%\end{problem}
+%
+%\begin{problem}
+%Use your formulas for Re(z) and Im(z) to write an equation in z (without x and y) for the line y = 2x - 3 in the complex plane.  Simplify the equation.  
+%\end{problem}
+%
+%\begin{problem}
+%Write an equation in z for the line ax+by =c, where a, b, and c are real numbers.  What happens when a = 0?  When b = 0? 
+%\end{problem}
+
+\begin{problem}
+Prove, without using trigonometry, that multiplication by $i$ rotates the complex plane $90^{\circ}$ counter-clockwise.  Hint: Multiply $z=x+iy$ by $i$ and think about slope.
+\vfill 
+\end{problem}
+
+\begin{problem}
+Prove that multiplying by a complex number $w = a + bi$ is a composition of a rotation and a dilation and specify both the angle of rotation and the dilation factor.  Hints: For a generic complex number $z$, how do $za$ and $zbi$ relate to $z$?  How does $zw$ relate to $za$ and $zbi$?  
+\vfill 
+\end{problem}
+
+\begin{problem}
+For real numbers $a$ and $b$, it is well known that $\sqrt{ab}=\sqrt{a}\sqrt{b}$.  Show that this rule does not always hold for complex numbers, and explain why.  
+\vfill 
+\end{problem}
+
+\begin{problem}
+Show that with the convention $-\pi<\arg{z}\le\pi$, the rule $\arg{zw}=\arg{z}+\arg{w}$ holds sometimes but not always.  Give examples of each.  Explain the advantages of thinking of $\arg{z}$ as an equivalence class of numbers that differ from one another by integer multiples of $2\pi$?.
+\vfill 
+\end{problem}
+
+%\begin{problem}
+%Show that if p and q are complex numbers and k > 0, then the graph of   is a circle or a line in the complex plane.  Specify the conditions under which the graph is a line.  
+%\end{problem}
+%
+%\begin{problem}
+%Pick a complex number   where a and b are integers and  .  Let  .  Find the length of z.  What do you notice?  Explain how you can use this idea to generate some ?useful collections of numbers.?  Show that the method works and explain why it is necessary that a and b be integers with  .  
+%\end{problem}
+
+
+
+
+\end{document}
