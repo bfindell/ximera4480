@@ -1,12 +1,12 @@
-%\documentclass{ximera}
-\documentclass[space,handout,nooutcomes]{ximera}
+\documentclass{ximera}
+%\documentclass[space,handout,nooutcomes]{ximera}
 
-\newcommand{\N}{\mathbb N}
-\newcommand{\W}{\mathbb W}
-\newcommand{\C}{\mathbb C}
-\newcommand{\Z}{\mathbb Z}
-\newcommand{\Q}{\mathbb Q}
-\newcommand{\R}{\mathbb R}
+%\newcommand{\N}{\mathbb N}
+%\newcommand{\W}{\mathbb W}
+%\newcommand{\C}{\mathbb C}
+%\newcommand{\Z}{\mathbb Z}
+%\newcommand{\Q}{\mathbb Q}
+%\newcommand{\R}{\mathbb R}
 
 \title{Identities and Inverses, Part 2}
 
@@ -104,23 +104,22 @@ This distinction and the ``maps to'' notation are likely too subtle when high sc
 Once we consider function to be objects, we can specify an operation for combining such objects.  To reach the goal of discussing inverses of functions, we must agree that \emph{the operation is function composition}.  The open circle symbol, $\circ$, is often used to indicate function composition, so that $f\circ g$  indicates the composition of functions $f$ and $g$, taken as whole objects.  The expression $f(g(x_0))$, in contrast, is about particular function values.  The statement $(f\circ g)(x) = f(g(x))$ indicates how the two ideas are related.  
 
 \begin{question}
-Suppose $f: x\mapsto x^2$ and $g: x\mapsto x+3$.  Compute $f\circ g$ and $g\circ f$.  What do you notice?  
-\begin{freeResponse}
-\begin{hint}
-First, $f(g(x))=f(x+3)=(x+3)^2$.  So $f\circ g: x\mapsto (x+3)^2$. 
+Suppose $f: x\mapsto x^2$ and $g: x\mapsto x+3$.  Compute: 
+\begin{itemize}
+\item $f\circ g: x\mapsto \answer{(x+3)^2}$ 
+\item $g\circ f: x\mapsto \answer{x^2+3}$. 
+\end{itemize}
 
-Second, $g(f(x))=g(x^2)=x^2+3$.  So $g\circ f: x\mapsto x^2+3$. 
-
+\begin{feedback}[correct]
 Note that $f\circ g \neq g\circ f$, which is to say that function composition is not commutative.  
-\end{hint}
-\end{freeResponse}
+\end{feedback}
 \end{question}
 
 \section*{Defining Identity and Inverse}
 At last, we can define identity function.  To keep the discussion within the realm of school mathematics, let's consider only real-valued functions of a real variable.  In other words, both the input and output values are assumed to be real numbers, so that both the domain and the range are subsets of the real numbers.  
 
 \begin{definition}
-A function $I$ is said to be an \emph{identity function} on a domain $D$ if $f\circ I=f$ and $I\circ f = f$ for any function $f$ with domain $D$.  Note that these are statements about whole functions.  
+A function $I$ is said to be an \emph{identity function} on a domain $D$ if $f\circ I=\answer{f}$ and $I\circ f = \answer{f}$ for any function $f$ with domain $D$.  Note that these are statements about whole functions.  
 \end{definition}
 
 \begin{question}
@@ -136,21 +135,18 @@ It is essentially the same idea, with appropriate substitutions.  Replace functi
 Restate the definition of identity function so that it involves statements about function values.  
 \begin{freeResponse}
 \begin{hint}
-If function $I$ is called the identity function on domain $D$ if $f(I(x)) = f(x)$ and $I(f(x))=f(x)$ for all $x\in D$ and for any function $f$ with domain $D$.  
+If function $I$ is called the identity function on domain $D$ if $f(I(x)) = \answer{f(x)}$ and $I(f(x))=\answer{f(x)}$ for all $x\in D$ and for any function $f$ with domain $D$.  
 \end{hint}
 \end{freeResponse}
 \end{question}
 
 \begin{question}
 What is the identity function on the real numbers?  Call it $I$.  
-\begin{freeResponse}
-\begin{hint}
-$I(x)=x$.
-\end{hint}
-\end{freeResponse}
+
+$I(x)=\answer{x}$.
 \end{question}
 
-Before we define the inverse of a function, we must first acknowledge that not all functions have inverses.  We will address this  issue in more detail later in the course.  For now, let's restrict our attention to a particular collection of invertible functions: those that are both one-to-one and onto a domain $D$ that is a subset of $\R$.  
+Before we define the inverse of a function, we must first acknowledge that not all functions have inverses.  We will address this  issue in more detail later in the course.  For now, let's restrict our attention to a particular collection of invertible functions: those that are both one-to-one and onto a domain $D$ that is a subset of $\mathbb R$.  
 
 \begin{remark}
 If the function $f:A\rightarrow B$ is not one-to-one, it can be made one-to-one by restricting its domain to a subset $X$ of $A$.  To ensure the function is onto, let $R=f(X)$, the actual range of the restricted function.  Then the function $g:X\rightarrow R$ given by $x\mapsto f(x)$ for all $x\in X$ is both one-to-one and onto, and hence it is invertible.  
@@ -172,7 +168,7 @@ It is essentially the same idea, with appropriate substitutions.  Replace functi
 \begin{remark}
 This analogy between multiplicative inverse and inverse of a function is what is behind the confusing notation $f^{-1}$ for the inverse of a function.  If $a$ is a nonzero real number, then $a^{-1}$ denotes the inverse of $a$ with respect to multiplication.  Similarly, if $f$ is an invertible function, then $f^{-1}$ means the inverse of $f$ with respect to function composition. 
 
-We should apologize to students for the fact that in $\sin^2 x$, the exponent is about multiplication, whereas in $\sin^{-1} x$, the exponent is about function composition.  Because these notations are incompatible, some mathematicians and teachers use the notation $\arcsin x$ instead.  
+We should apologize to students for the fact that in $\sin^2 x$, the exponent is about multiplication, whereas in $\sin^{-1} x$, the exponent is about function composition.  Because these notations are incompatible, some mathematicians and teachers use the notation $\arcsin x$ in place of $\sin^{-1} x$.  
 \end{remark}
 
 \begin{question}
@@ -208,7 +204,7 @@ This is subtle and worth some thought.
 \end{question}
 
 \section*{Examples of Inverses of Functions}
-Addition is a ``binary operation,'' which is to say it takes two numbers (as inputs) and returns their sum (as output).  In other words, addition of real numbers is a function with the domain $\R\times \R$, pairs of real numbers, and the range $\R$.  How, then, 
+Addition is a ``binary operation,'' which is to say it takes two numbers (as inputs) and returns their sum (as output).  In other words, addition of real numbers is a function with the domain $\mathbb R\times \mathbb R$, pairs of real numbers, and the range $\mathbb R$.  How, then, 
 should we think about the oft-heard claim that ``Subtraction is the inverse of addition''?  
 
 When considering the expression $5+3$, we can ``undo'' the addition by subtracting 3, and we get back to where we started, which happens to be at 5 but which could have been any number.  In other words, we are thinking of the ``add 3'' function $f:x\mapsto x+3$.  
