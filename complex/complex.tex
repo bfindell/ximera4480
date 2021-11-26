@@ -2,7 +2,7 @@
 
 \input{../preamble.tex}
 
-\title{Complex Numbers (draft)}
+\title{Complex Numbers}
 \author{Brad Findell}
 \begin{document}
 \begin{abstract}
@@ -30,7 +30,7 @@ Let $\alpha=\tfrac{\sqrt{2}}{2}+\tfrac{\sqrt{2}}{2}i$ Compute $\alpha^n$ for $n 
 \vfill
 \end{problem}
 
-% Another one: $\beta = \frac{1}{4}\left(\sqrt{5}-1\right)+\frac{1}{4}i\sqrt{2}\sqrt{5+\sqrt{5}}$
+% Fifth roots of unity: $\beta = \frac{1}{4}\left(\sqrt{5}-1\right)+\frac{1}{4}i\sqrt{2}\sqrt{5+\sqrt{5}}$
 
 \begin{problem}
 Describe where and how you see modular arithmetic in the previous problems.
@@ -38,11 +38,6 @@ Describe where and how you see modular arithmetic in the previous problems.
 \end{problem}
 
 \newpage
-
-\begin{problem}
-Assuming that $x$ and $y$ are real numbers, explain why the product $(x+iy)(x-iy)$ is always a nonnegative real number. 
-\vfill
-\end{problem}
 
 % The notation $\text{cis}\theta$ is a shorthand for $\cos\theta +i\sin\theta$, sometimes used in Precalculus texts. 
 
@@ -83,7 +78,13 @@ Do rectangular coordinates uniquely label a point in the plane?
 \newpage 
 
 
-Given a complex number $z=a+bi$, the absolute value of $z$ (also called the modulus of $z$) is given by $|z|=\sqrt{a^2+b^2}$.  The conjugate of $z$, denoted $\overline{z}$, is $a-bi$.  When a complex number is given in polar coordinates, the angle is sometimes called the argument of $z$, and it is common to choose $-\pi<\arg(z)\le \pi$.  
+\begin{problem}
+Assuming that $x$ and $y$ are real numbers, explain why the product $(x+iy)(x-iy)$ is always a nonnegative real number. 
+\vfill
+\end{problem}
+
+Given a complex number $z=a+bi$, the absolute value of $z$ (also called the modulus of $z$) is given by $|z|=\sqrt{a^2+b^2}$.  The conjugate of $z$, denoted $\overline{z}$, is $a-bi$.  When a complex number is given in polar coordinates, the angle is sometimes called the \textbf{argument} of $z$, and it is common to choose $-\pi<\arg(z)\le \pi$.  
+
 
 \begin{problem}
 If you think of $z$ as a vector from the origin, what is a geometric interpretation of $|z|$?  How does it relate to $z\overline{z}$?  
@@ -123,55 +124,6 @@ Now suppose the complex number $z$ is on the unit circle.  Find $\overline{z}$, 
 
 
 \begin{problem}
-Multiply $a + bi$ times $c + di$ for the special case when $a=\cos\alpha$, $b=\sin\alpha$, 
-$c=\cos\beta$, $d=\sin\beta$.  Use your result to prove the angle-addition property of complex multiplication.  Explain how this idea could help you reconstruct certain formulas.  
-\vfill 
-\end{problem}
-
-%\begin{problem}
-%Use your calculator to compute $\cis 72 + \cis 144 + \cis 216 + \cis 288 + \cis 360$.
-%\end{problem}
-
-\begin{problem}
-Use long division to simplify $\frac{x^{43}-1}{x-1}$.
-\vfill 
-\end{problem}
-
-\begin{problem}
-Simplify $a+ar+ar^2+\dots+ar^{n-1}$.  (Write it without dots.)
-\vfill 
-\end{problem}
-
-\newpage 
-
-
-A solution to the equation $x^n=1$ is called an $n^\text{th}$  root of unity.  If $x$ is an $n^\text{th}$ root of unity and $x^k\ne 1$ for all integers $k$, $0<k<n$, then $x$ is called a primitive $n^\text{th}$ root of unity.  
-
-\begin{problem}
-In previous problems, you have come across many roots of unity.  List many that you have found.  For each one, indicate the values of $n$ for which each is an $n^\text{th}$ root of unity.  Indicate also the value of for which it is a primitive $n^\text{th}$ root of unity.  
-\vfill
-\end{problem}
-
-%\begin{problem}
-%Find all the primitive $n^\text{th}$ roots of unity for $n = 2, 3, 4, 5, 6, 7, 8, 9$, and $10$.  Be sure that you are able to demonstrate that each root is actually a primitive $n^\text{th}$ root of unity and also that you have found them all.  
-%\vfill 
-%\end{problem}
-
-\begin{problem}
-If $z = a + bi$ (with $b$ not $0$) is a primitive $n^\text{th}$ root of unity, then is the conjugate of $z$ also a primitive $n^\text{th}$ root of unity?  Make a conjecture and prove it.
-\vfill 
-\end{problem}
-
-\begin{problem}
-Use DeMoivre's Theorem to find a primitive $5^\text{th}$ root of unity.  Call it $x$, and compute $1+x+x^2+x^3+x^4$. Find a geometric explanation for your result.  
-\vfill 
-\end{problem}
-
-
-\newpage 
-
-
-\begin{problem}
 Describe (geometrically) the following transformations of the complex plane: 
 \begin{enumerate}
 \item Multiplication by $3$. 
@@ -195,11 +147,32 @@ Describe how multiplication by $r$ transforms the plane, when $r > 0$, and inclu
 \vfill 
 \end{problem}
 
-\newpage 
+\begin{problem}
+Prove, without using trigonometry, that multiplication by $i$ rotates the complex plane $90^{\circ}$ counter-clockwise.  Hint: Multiply $z=x+iy$ by $i$ and think about slope.
+\vfill 
+\end{problem}
 
 
 \begin{problem}
 Describe how multiplication by $\cos\theta + i\sin\theta$ transforms the plane, and include the special cases that you described in a previous problem.
+\vfill 
+\end{problem}
+
+
+\newpage 
+
+
+%\begin{problem}
+%Use your calculator to compute $\cis 72 + \cis 144 + \cis 216 + \cis 288 + \cis 360$.
+%\end{problem}
+
+\begin{problem}
+Use long division to simplify $\frac{x^{43}-1}{x-1}$.
+\vfill 
+\end{problem}
+
+\begin{problem}
+Simplify $a+ar+ar^2+\dots+ar^{n-1}$.  (Write it without dots.)
 \vfill 
 \end{problem}
 
@@ -241,15 +214,6 @@ Prove without calculation that $(a+bi)/(a-bi)$ always has absolute value 1.
 %Write an equation in $z$ for the line $ax+by =c$, where $a$, $b$, and $c$ are real numbers.  What happens when $a = 0$?  When $b = 0$? 
 %\end{problem}
 
-\begin{problem}
-Prove, without using trigonometry, that multiplication by $i$ rotates the complex plane $90^{\circ}$ counter-clockwise.  Hint: Multiply $z=x+iy$ by $i$ and think about slope.
-\vfill 
-\end{problem}
-
-\begin{problem}
-Prove that multiplying by a complex number $w = a + bi$ is a composition of a rotation and a dilation and specify both the angle of rotation and the dilation factor.  Hints: For a generic complex number $z$, how do $za$ and $zbi$ relate to $z$?  How does $zw$ relate to $za$ and $zbi$?  
-\vfill 
-\end{problem}
 
 \begin{problem}
 For positive real numbers $a$ and $b$, it is well known that $\sqrt{ab}=\sqrt{a}\sqrt{b}$.  Show that this rule does not always hold for complex numbers, and explain why.  
