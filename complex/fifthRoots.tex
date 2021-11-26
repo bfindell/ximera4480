@@ -15,22 +15,22 @@ A sequence of problems deriving the fifth roots of unity.
 \begin{problem}
 
 To find the fifth roots of unity, we need to solve the equation: 
-\[
+\begin{equation}
 x^5 = 1
-\]
+\end{equation}
 Or equivalently, 
-\[
+\begin{equation} \label{eqA}
 \answer{x^5 - 1} = 0
-\]
+\end{equation}
 
 \begin{problem}
 Clearly $x=1$ is a solution, so $\answer{(x-1)}$ must be a factor.  
 
 \begin{problem}
-The left side factors as follows: 
-\[
+The left side of (\ref{eqA}) factors as follows: 
+\begin{equation}
 (x-1)\left(\answer{x^4+x^3+x^2+x+1}\right)=0
-\]
+\end{equation}
 \end{problem}
 \end{problem}
 \end{problem}
@@ -58,7 +58,7 @@ Explanations:
 \[
 \left(x^{-1}\right)^n = \answer{x^{-n}} = \left(x^n\right)^{-1} = 1^{-1} = 1. 
 \]
-\item Suppose $x=a+bi$. Because $x$ is on the unit circle, $a^2+b^2 = \answer{1}$.  Then 
+\item Suppose $x=a+bi$, with $a$ and $b$ real numbers. Because $x$ is on the unit circle, $a^2+b^2 = \answer{1}$.  Then 
 \[
 x^{-1}=\frac{1}{a+bi}=\frac{1}{a+bi}\cdot\frac{a-bi}{\answer{a-bi}}=\frac{a-bi}{\answer{a^2+b^2}}=\frac{a-bi}{1}=\overline{x}
 \]
@@ -75,33 +75,33 @@ So let's organize the equation around $x + \frac{1}{x}$.
 \begin{problem}
 
 To solve: 
-\[
-x^4+x^3+x^2+x+1=0
-\]
+\begin{equation}
+x^4+x^3+x^2+x+1=0,
+\end{equation}
 
 Divide by $x^2$, and then organize around powers of $x + \frac{1}{x}$: 
-\begin{align*}
+\begin{align}
 x^2+x+1+\frac{1}{x}+\frac{1}{x^2}&=0 \\
-\left(x^2+ \answer{2} + \frac{1}{x^2}\right)+ \left(x+\frac{1}{x}\right)+\answer{-1}&=0 \\
-\end{align*}
+\left(x^2+ \answer{2} + \frac{1}{x^2}\right)+ \left(x+\frac{1}{x}\right)+\answer{-1}&=0 \label{eqB}
+\end{align}
 \begin{hint}
-The expression inside the first parentheses needs to be equivalent to 
+The expression inside the first parentheses of (\ref{eqB}) needs to be equivalent to 
 \[
 \left(x+\frac{1}{x}\right)^2
 \]
 \end{hint}
 \begin{problem}
 Now let $y = x + \frac{1}{x}$, and the equation becomes: 
-\[
+\begin{equation} \label{eqC}
 \answer{y^2+y-1}=0
-\]
+\end{equation}
 
-Solve that equation for $y$.
+Solve equation (\ref{eqC}) for $y$.
 
 How many solutions?  $\answer{2}$ 
 
 \begin{problem}
-Enter the solutions, from least to greatest: 
+Enter the solutions to (\ref{eqC}), from least to greatest: 
 
 \begin{prompt}
 $y = \answer{\frac{-1-\sqrt{5}}{2}}$
@@ -115,19 +115,19 @@ $y = \answer{\frac{-1+\sqrt{5}}{2}}$
 
 \begin{problem}
 We defined $y$ as follows: 
-\[
+\begin{equation} \label{eqD}
 y = x + \frac{1}{x}.  
-\]
-Solve that equation for $x$ in terms of $y$.  
+\end{equation}
+Solve equation (\ref{eqD}) for $x$ in terms of $y$.  
 \begin{hint}
-Multiply to clear the fractions, then recognize that the equation is quadratic in $x$.  
+Multiply to clear the fractions, then recognize that the (\ref{eqD}) is quadratic in $x$.  
 % $x^2 - yx + 1 = 0
 \end{hint}
 
 How many solutions?  $\answer{2}$ 
 \begin{problem}
 \begin{prompt}
-Enter the solutions (for $x$ in terms of $y$) as a conjugate pair: 
+Enter the solutions to (\ref{eqD}), for $x$ in terms of $y$, as a conjugate pair: 
 
 $x = \answer{\frac{y}{2}} \pm \answer{\frac{\sqrt{y^2-4}}{2}}$
 
@@ -139,11 +139,11 @@ $x = \answer{\frac{y}{2}} \pm \answer{\frac{\sqrt{y^2-4}}{2}}$
 
 \begin{problem}
 Now put the previous answers together to yield all $\answer{4}$ complex solutions $x$ to the equation
-\[
+\begin{equation} \label{eqE}
 x^4+x^3+x^2+x+1=0.
-\]
+\end{equation}
 
-Enter the solutions as conjugate pairs: 
+Enter the solutions to (\ref{eqE}) as conjugate pairs: 
 
 Quadrants 1 and 4: $\left(\answer{\frac{-1+\sqrt{5}}{4}}\right) 
      \pm \left(\answer{\frac{\sqrt{10+2\sqrt{5}}}{4}}\right)i$
