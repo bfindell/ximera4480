@@ -1,0 +1,159 @@
+\documentclass[space,nooutcomes]{ximera} 
+
+\input{../preamble.tex}
+
+\title{Fifth Roots of Unity}
+\author{Brad Findell}
+\begin{document}
+\begin{abstract}
+A sequence of problems deriving the fifth roots of unity.   
+\end{abstract}
+\maketitle
+
+
+
+\begin{problem}
+
+To find the fifth roots of unity, we need to solve the equation: 
+\[
+x^5 = 1
+\]
+Or equivalently, 
+\[
+\answer{x^5 - 1} = 0
+\]
+
+\begin{problem}
+Clearly $x=1$ is a solution, so $\answer{(x-1)}$ must be a factor.  
+
+\begin{problem}
+The left side factors as follows: 
+\[
+(x-1)\answer{(x^4+x^3+x^2+x+1)}=0
+\]
+\end{problem}
+\end{problem}
+\end{problem}
+
+\begin{problem}
+From previous explorations, we know that roots of unity all lie on the $\answer[format=string]{unit circle}$ (two words). 
+
+If $x$ is an $n^\text{th}$ root of unity, what do we know about these quantities: 
+\begin{itemize}
+\item $x^{-1}$ 
+\item $\overline{x}$
+\item $x+x^{-1}$
+\end{itemize}
+
+Answers:
+\begin{enumerate}
+\item $x^{-1}$ is an $n^\text{th}$ root of $\answer[format=string]{unity}$.  
+\item $\overline{x} = \answer{x^{-1}}$. 
+\item $x+x^{-1}$ is a $\answer[format=string]{real}$ number.  
+\end{enumerate}
+\begin{problem}
+Explanations: 
+\begin{enumerate}
+\item Because $x^n=1$, it follows that 
+\[
+\left(x^{-1}\right)^n = \answer{x^{-n}} = \left(x^n\right)^{-1} = 1^{-1} = 1. 
+\]
+\item Suppose $x=a+bi$. Because $x$ is on the unit circle, $a^2+b^2 = \answer{1}$.  Then 
+\[
+x^{-1}=\frac{1}{a+bi}=\frac{1}{a+bi}\cdot\frac{a-bi}{\answer{a-bi}}=\frac{a-bi}{\answer{a^2+b^2}}=\frac{a-bi}{1}=\overline{x}
+\]
+\item For any complex number, $x+\overline{x}$ is a $\answer[format=string]{real}$ number.  When $x$ is on the unit circle, 
+\[
+x + \overline{x} = x + x^{-1} = x + \frac{1}{x}\text{ is a }\answer[format=string]{real}\text{ number.}
+\]
+So let's organize the equation around $x + \frac{1}{x}$.  
+\end{enumerate}
+\end{problem}
+\end{problem}
+
+
+\begin{problem}
+
+To solve: 
+\[
+x^4+x^3+x^2+x+1=0
+\]
+
+Divide by $x^2$, and then organize around powers of $x + \frac{1}{x}$: 
+\begin{align*}
+x^2+x+1+\frac{1}{x}+\frac{1}{x^2}&=0 \\
+\left(x^2+ \answer{2} + \frac{1}{x^2}\right)+ \left(x+\frac{1}{x}\right)+\answer{-1}&=0 \\
+\end{align*}
+\begin{hint}
+The expression inside the first parentheses needs to be equivalent to 
+\[
+\left(x+\frac{1}{x}\right)^2
+\]
+\end{hint}
+\begin{problem}
+Now let $y = x + \frac{1}{x}$, and the equation becomes: 
+\[
+\answer{y^2+y-1}=0
+\]
+
+Solve that equation for $y$.
+
+How many solutions?  $\answer{2}$ solutions. 
+
+\begin{problem}
+Enter the solutions, from least to greatest: 
+
+\begin{prompt}
+$y = \frac{-1-\sqrt{5}}{2}$
+
+$y = \frac{-1+\sqrt{5}}{2}$
+\end{prompt}
+
+\end{problem}
+\end{problem}
+\end{problem}
+
+\begin{problem}
+We defined $y$ as follows: 
+\[
+y = x + \frac{1}{x}.  
+\]
+Solve that equation for $x$ in terms of $y$.  
+\begin{hint}
+Multiply to clear the fractions, then recognize that the equation is quadratic in $x$.  
+% $x^2 - yx + 1 = 0
+\end{hint}
+
+How many solutions?  $\answer{2}$ solutions. 
+\begin{problem}
+\begin{prompt}
+Enter the solutions (for $x$ in terms of $y$) as a conjugate pair: 
+
+$x = \answer{\frac{y}{2}} \pm \answer{\frac{\sqrt{y^2-4}}{2}}$
+
+\end{prompt}
+
+\end{problem}
+\end{problem}
+
+
+\begin{problem}
+Now put the previous answers together to yield $\answer{4}$ complex solutions $x$ to the equation
+\[
+x^4+x^3+x^2+x+1=0.
+\]
+
+Enter the solutions as conjugate pairs: 
+
+Quadrants 1 and 4: $\left(\answer{\frac{-1+\sqrt{5}}{4}}\right) 
+     \pm \left(\answer{\frac{\sqrt{10+2\sqrt{5}}}{4}}\right)i$
+
+Quadrants 2 and 3: $\left(\answer{\frac{-1-\sqrt{5}}{4}}\right)
+     \pm \left(\answer{\frac{\sqrt{10-2\sqrt{5}}}{4}}\right)i$ 
+
+
+
+\end{problem}
+
+
+\end{document}
