@@ -17,10 +17,7 @@ The identity function and inverses of functions as examples of the concepts of i
 \maketitle
 
 
-%
-%\begin{description}
-%
-%\end{description}
+\section*{Introduction}
 In a previous activity, we explored identities and inverses through a careful process that 
 involved four steps:  
 \begin{enumerate}
@@ -30,6 +27,7 @@ involved four steps:
 \item Defining the meaning of inverse with respect to that operation on those objects. 
 \end{enumerate}
 
+\section*{Functions}
 In this activity, we explore identities and inverses for functions.  
 \begin{remark}
 In the Common Core State Standards (CCSS), the expectations regarding inverses of functions are quite modest for the audience of all students, requiring only that they ``Solve an equation of the form $f(x) = c$ for a simple function $f$ that has an inverse and write an expression for the inverse (F-BF.4.a).''  Students in Precalculus and Calculus need more, of course.  
@@ -110,9 +108,10 @@ Suppose $f: x\mapsto x^2$ and $g: x\mapsto x+3$.  Compute:
 \item $g\circ f: x\mapsto \answer{x^2+3}$. 
 \end{itemize}
 
-\begin{feedback}[correct]
-Note that $f\circ g \neq g\circ f$, which is to say that function composition is not commutative.  
-\end{feedback}
+\begin{question}
+Note that $f\circ g \neq g\circ f$, which is to say that function composition is \textbf{not} 
+$\answer[format=string]{commutative}$.  
+\end{question}
 \end{question}
 
 \section*{Defining Identity and Inverse}
@@ -153,16 +152,22 @@ If the function $f:A\rightarrow B$ is not one-to-one, it can be made one-to-one 
 \end{remark}
 
 \begin{definition}
-Suppose $f:D\rightarrow D$ is one-to-one and onto.  A function $g:D\rightarrow D$ is the \emph{inverse} of $f$ if $g\circ f = I$ and $f\circ g = I$.  Note that $f$ is then also the inverse of $g$, and hence $f$ and $g$ are \emph{inverse functions} in the sense that they are inverses of each other.  
+Suppose $f:D\rightarrow D$ is one-to-one and onto.  A function $g:D\rightarrow D$ is the \emph{inverse} of $f$ if $\answer{g}\circ f = \answer{I}$ and $f\circ \answer{g} = \answer{I}$.  Note that $f$ is then also the inverse of $g$, and hence $f$ and $g$ are \emph{inverse functions} in the sense that they are inverses of each other.  
 \end{definition}
 
 \begin{question}
-Describe the similarities and differences between this definition of the inverse of a function and your definition of multiplicative inverse.  
-\begin{freeResponse}
-\begin{hint}
-It is essentially the same idea, with appropriate substitutions.  Replace function composition with multiplication, $I$ with $1$, $f$ with $x$, and $g$ (the inverse of $f$) with $y$ (the multiplicative inverse of $x$).  
-\end{hint}
-\end{freeResponse}
+Describe the similarities and differences between this definition of the inverse of a function and your definition of multiplicative $\answer[format=string]{inverse}$.  
+\begin{solution}
+It is essentially the same idea, with appropriate substitutions.  Replace 
+\begin{itemize}
+\item function composition with $\answer[format=string]{multiplication}$; 
+\item $I$, the $\answer[format=string]{identity function}$ (two words) with $\answer{1}$, 
+    the $\answer[format=string]{multiplicative identity}$ (two words); 
+\item the arbitrary $\answer[format=string]{function}$ $f$ with the arbitrary $\answer[format=string]{number}$ $x$;
+\item and $g$, the (function) inverse of $\answer{f}$, with $y$, 
+    the $\answer[format=string]{multiplicative}$ inverse of $\answer{x}$.  
+\end{itemize}
+\end{solution}
 \end{question}
 
 \begin{remark}
@@ -209,28 +214,27 @@ should we think about the oft-heard claim that ``Subtraction is the inverse of a
 
 When considering the expression $5+3$, we can ``undo'' the addition by subtracting 3, and we get back to where we started, which happens to be at 5 but which could have been any number.  In other words, we are thinking of the ``add 3'' function $f:x\mapsto x+3$.  
 \begin{question}
-Use these ideas to determine the inverse of the function $f:x\mapsto x+3$?  Use the definition of inverse function to demonstrate that you are correct.  
-\begin{freeResponse}
-\begin{hint}
-The inverse of $f$ is the the ``subtract 3'' function $g:x\mapsto x-3$.  
+Use these ideas to determine the inverse of ``add 3'' function $f:x\mapsto \answer{x+3}$. Use the definition of inverse function to demonstrate that you are correct.  
+\begin{solution}
+The inverse of $f$ is the the ``$\answer[format=string]{subtract 3}$'' function $g:x\mapsto \answer{x-3}$.  
 
-Check that $g\circ f=I$ as follows:  $g(f(x))=g(x+3)=(x+3)-3=x$.  
+Check that $g\circ f=I$ as follows:  $g(f(x))=g\left(\answer{x+3}\right)=\left(\answer{x+3}\right)-3=\answer{x}$.  
 
-Check that $f\circ g = I$ as follows:  $f(g(x))=f(x-3)=(x-3)+3=x$.  
-
-\end{hint}
-\end{freeResponse}
+Check that $f\circ g = I$ as follows:  $f(g(x))=f\left(\answer{x-3}\right)=\left(\answer{x-3}\right)+3=\answer{x}$.  
+\end{solution}
 \end{question}
 
-Note the way in which $g$ ``undoes'' or ``reverses'' the effect of $f$.  If we know the output of $f$ was 12, we can compute $g(12)=9$ to know that the input must have been 9.  
+\begin{question}
+Note the way in which $g$ ``undoes'' or ``reverses'' the effect of $f$.  If we know the output of $f$ was 12, we can compute $g(12)=\answer{9}$ to know that the input to $f$ must have been 9.  
+\end{question}
 
 \begin{question}
-Suppose $f:x\mapsto 2x-5$.  Use verbal descriptions of $f$ and the idea of ``undoing'' to determine the inverse of $f$.  Explain your reasoning.  
-\begin{freeResponse}
-\begin{hint}
-Think of $f$ as ``multiply by 2 then subtract 5.'' To undo that, we would ``add 5 then divide by 2.''  So $g:x\mapsto \frac{x+5}{2}$ is the inverse of $f$.  
-\end{hint}
-\end{freeResponse}
+Suppose $f:x\mapsto 2x-5$.  Use verbal descriptions of $f$ and the idea of ``undoing'' to explain why the the inverse of $f$ is $g:x\mapsto \answer{\frac{x+5}{2}}$.  
+\begin{solution}
+Think of $f$ as ``multiply by 2 then subtract 5.'' To undo that, we undo each operation, in the 
+$\answer[format=string]{opposite}$ order.  In other words, we 
+``$\answer[format=string]{add 5}$ then $\answer[format=string]{divide by 2}$.''  So $g:x\mapsto \frac{x+5}{2}$ is the inverse of $f$.  
+\end{solution}
 \end{question}
 
 \begin{remark}
@@ -246,23 +250,20 @@ A \emph{family of functions} is a parametrized set of related functions.
 Much of high school mathematics is organized around particular families of functions, such as linear functions, quadratic functions, exponential functions, or trigonometric functions.  The quadratic functions, for example, are the family $f(x)=ax^2+bx+c$, where $a$, $b$, and $c$ are real numbers and $a\neq 0$.  The parameters $a$, $b$, and $c$, when conceived as ``fixed,'' indicate which particular function we are talking about.  Note that ``trigonometric functions'' are not a family in the sense of the above definition.  
 
 \begin{question}
-In the family of quadratic functions described above, why is it important to state that $a\neq 0$?
-\begin{freeResponse}
-\begin{hint}
-If $a=0$ the function is not quadratic but linear.
-\end{hint}
-\end{freeResponse}
+In the family of quadratic functions described above, why is it important to state that $a\neq \answer{0}$?
+\begin{solution}
+If $a=0$, the function is not quadratic but $\answer[format=string]{linear}$.
+\end{solution}
 \end{question}
 
 The concept of a family of functions is much more varied than the standard families that populate high school mathematics.  For example, in problem-solving situations, it might be useful to consider the family of cubic functions with zeros at 0 and 1, which could be parametrized as $f:x\mapsto ax(x-1)(x-r)$.  
 
 \begin{question}
-Use families of functions to explain the statement ``division is the inverse of multiplication.''  
-\begin{freeResponse}
-\begin{hint}
-Consider the family of ``multiply by $a$'' functions, $f_a:x\mapsto ax$, where $a\neq 0$.  The inverse of $f_a$ is the ``divide by $a$'' function $g:x\mapsto \frac{x}{a}$.   
-\end{hint}
-\end{freeResponse}
+Use families of functions to explain the statement ``division is the inverse of 
+$\answer[format=string]{multiplication}$.''  
+\begin{solution}
+Consider the family of ``multiply by $a$'' functions, $f_a:x\mapsto \answer{ax}$, where $a\neq \answer{0}$.  The inverse of $f_a$ is the ``$\answer[format=string]{divide}$ by $a$'' function $g:x\mapsto \answer{\frac{x}{a}}$.   
+\end{solution}
 \end{question}
 
 

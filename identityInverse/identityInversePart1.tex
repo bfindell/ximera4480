@@ -19,8 +19,7 @@ Complete the following sentence:
 To \wordChoice{\choice[correct]{optimize}\choice{minimize}} my learning, I plan to $\answer[format=string]{submit}$ my own answer \wordChoice{\choice[correct]{before}\choice{after}} revealing the $\answer[format=string]{hint}$.  
 \end{question}
 
-%\begin{description}
-%\end{description}
+\section*{Introduction}
 How is an inverse matrix like a multiplicative inverse or an inverse function?  
 
 When using the terms \emph{identity} and \emph{inverse}, it is
@@ -37,7 +36,7 @@ set (e.g., integers).
 \end{definition}
 
 \begin{question}
-Which of the following some sets of numbers that \textbf{do not} have an additive identity?  (Select all.)
+Which of the following sets of numbers \textbf{do not} have an additive identity?  (Select all.)
 \begin{selectAll}
 \choice[correct]{counting numbers}
 \choice{whole numbers}
@@ -111,8 +110,8 @@ In other words, $x\cdot \answer{1}=\answer{x}$ and $\answer{1}\cdot x=\answer{x}
 
 \begin{question}Define \emph{multiplicative inverse} for your favorite set of numbers:   
 
-Given a real number $x$, a real number $y$ is the multiplicative inverse of $x$ if $x\answer{y}=\answer{1}$ 
-and $\answer{y}x=\answer{1}$.  
+Given a real number $x$, a real number $y$ is the multiplicative inverse of $x$ if $x\cdot\answer{y}=\answer{1}$ 
+and $\answer{y}\cdot x=\answer{1}$.  
 
 \end{question}
 
@@ -136,6 +135,7 @@ $x = \answer{-1}$ or $x = \answer{1}$.
 \end{solution}
 \end{question}
 
+\section*{Matrices}
 When discussing matrices, there are lots of size restrictions
 regarding whether two matrices can be added or multiplied.  To keep
 the discussion simple, let's consider only $2\times 2$ matrices.  The
@@ -200,9 +200,9 @@ What is the $2\times 2$ (multiplicative) identity matrix?  Show how you know.
 \begin{solution}
 $I = \begin{bmatrix} \answer{1}&\answer{0} \\ \answer{0}&\answer{1} \end{bmatrix}$ is the multiplicative identity matrix because for any $2\times 2$ matrix $A$, 
 \[
-A\answer{I} = \answer{A}\text{ and }\answer{I}A=\answer{A}.  
+A\cdot\answer{I} = \answer{A}\text{ and }\answer{I}\cdot A=\answer{A}.  
 \]
-\begin{feedback}[correct]
+\begin{question}
 Here is more detail:  
 
 $\begin{bmatrix} a&b \\ c&d \end{bmatrix}  \begin{bmatrix} 1&0 \\ 0&1 \end{bmatrix} = 
@@ -210,7 +210,7 @@ $\begin{bmatrix} a&b \\ c&d \end{bmatrix}  \begin{bmatrix} 1&0 \\ 0&1 \end{bmatr
 and
 $\begin{bmatrix} 1&0 \\ 0&1 \end{bmatrix} \begin{bmatrix} a&b \\ c&d \end{bmatrix} = 
 \begin{bmatrix} a&b \\ c&d \end{bmatrix}$  for all $a$, $b$, $c$, $d$.  
-\end{feedback}
+\end{question}
 \end{solution}
 \end{question}
 
@@ -218,7 +218,7 @@ $\begin{bmatrix} 1&0 \\ 0&1 \end{bmatrix} \begin{bmatrix} a&b \\ c&d \end{bmatri
 What does it mean for matrices $A$ and $B$ to be (multiplicative) inverses of each other?  
 
 \begin{solution}
-Matrices $A$ and $B$ are inverses of each other if $A\answer{B}=\answer{I}$ and $\answer{B}A=\answer{I}$.  
+Matrices $A$ and $B$ are inverses of each other if $A\cdot\answer{B}=\answer{I}$ and $\answer{B}\cdot A=\answer{I}$.  
 \end{solution}
 \end{question}
 
@@ -236,11 +236,11 @@ The student thinks that ``inverse'' can apply to a single object, but ``inverse'
 Are there matrices that are their own (multiplicative) inverses?  If not, explain.  If so, list a few, and describe them all.
 \begin{solution}
 A matrix $A$ that is its own multiplicative inverse would be a solution to the equation $A\cdot \answer{A}=\answer{I}$ or $\answer{A^2}=I$.  There are an infinite number of matrices that satisfy this equation.  
-\begin{feedback}[correct]
+\begin{question}
 Here are four convenient ones: 
 
-$\begin{bmatrix} 1&0 \\ 0&1 \end{bmatrix}$, $\begin{bmatrix} -1&0 \\ 0&1 \end{bmatrix}$, $\begin{bmatrix} 1&0 \\ 0&-1 \end{bmatrix}$, $\begin{bmatrix} -1&0 \\ 0&-1 \end{bmatrix}$,
-\end{feedback}
+$I=\begin{bmatrix} 1&0 \\ 0&1 \end{bmatrix}$, $\begin{bmatrix} -1&0 \\ 0&1 \end{bmatrix}$, $\begin{bmatrix} 1&0 \\ 0&-1 \end{bmatrix}$, and $\begin{bmatrix} -1&0 \\ 0&-1 \end{bmatrix}=\answer{-I}$. 
+\end{question}
 \end{solution}
 \end{question}
 
