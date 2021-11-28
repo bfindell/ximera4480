@@ -114,7 +114,7 @@ $\answer[format=string]{commutative}$.
 \end{question}
 \end{question}
 
-\section*{Defining Identity and Inverse}
+\section*{The Identity Function}
 At last, we can define identity function.  To keep the discussion within the realm of school mathematics, let's consider only real-valued functions of a real variable.  In other words, both the input and output values are assumed to be real numbers, so that both the domain and the range are subsets of the real numbers.  
 
 \begin{definition}
@@ -122,21 +122,19 @@ A function $I$ is said to be an \emph{identity function} on a domain $D$ if $f\c
 \end{definition}
 
 \begin{question}
-Describe the similarities and differences between this definition of identity function and your definition of multiplicative identity.  
-\begin{freeResponse}
-\begin{hint}
-It is essentially the same idea, with appropriate substitutions.  Replace function composition with multiplication, $I$ with $1$, and $f$ as any function with $x$ as any number.  
-\end{hint}
-\end{freeResponse}
+Describe the similarities and differences between this definition of identity function and your definition of multiplicative $\answer[format=string]{identity}$.  
+\begin{question}
+It is essentially the same idea, with appropriate substitutions.  Replace function composition with 
+$\answer[format=string]{multiplication}$, $I$ with $\answer{1}$, and $f$ as any function with $x$ as any 
+$\answer[format=string]{number}$.  
+\end{question}
 \end{question}
 
 \begin{question}
 Restate the definition of identity function so that it involves statements about function values.  
-\begin{freeResponse}
-\begin{hint}
-If function $I$ is called the identity function on domain $D$ if $f(I(x)) = \answer{f(x)}$ and $I(f(x))=\answer{f(x)}$ for all $x\in D$ and for any function $f$ with domain $D$.  
-\end{hint}
-\end{freeResponse}
+\begin{solution}
+If function $I$ is called the identity function on domain $D$ if $f(I(x)) = \answer{f(x)}$ and $I(f(x))=\answer{f(x)}$ for all $x\in \answer{D}$ and for any function $f$ with domain $\answer{D}$.  
+\end{solution}
 \end{question}
 
 \begin{question}
@@ -145,6 +143,7 @@ What is the identity function on the real numbers?  Call it $I$.
 $I(x)=\answer{x}$.
 \end{question}
 
+\section*{Inverses of Functions}
 Before we define the inverse of a function, we must first acknowledge that not all functions have inverses.  We will address this  issue in more detail later in the course.  For now, let's restrict our attention to a particular collection of invertible functions: those that are both one-to-one and onto a domain $D$ that is a subset of $\mathbb R$.  
 
 \begin{remark}
@@ -157,7 +156,7 @@ Suppose $f:D\rightarrow D$ is one-to-one and onto.  A function $g:D\rightarrow D
 
 \begin{question}
 Describe the similarities and differences between this definition of the inverse of a function and your definition of multiplicative $\answer[format=string]{inverse}$.  
-\begin{solution}
+\begin{question}
 It is essentially the same idea, with appropriate substitutions.  Replace 
 \begin{itemize}
 \item function composition with $\answer[format=string]{multiplication}$; 
@@ -167,22 +166,21 @@ It is essentially the same idea, with appropriate substitutions.  Replace
 \item and $g$, the (function) inverse of $\answer{f}$, with $y$, 
     the $\answer[format=string]{multiplicative}$ inverse of $\answer{x}$.  
 \end{itemize}
-\end{solution}
+\end{question}
 \end{question}
 
-\begin{remark}
-This analogy between multiplicative inverse and inverse of a function is what is behind the confusing notation $f^{-1}$ for the inverse of a function.  If $a$ is a nonzero real number, then $a^{-1}$ denotes the inverse of $a$ with respect to multiplication.  Similarly, if $f$ is an invertible function, then $f^{-1}$ means the inverse of $f$ with respect to function composition. 
+\begin{question}
+The analogy between multiplicative inverse and inverse of a function is what is behind the confusing notation $f^{-1}$ for the inverse of a function.  If $a$ is a nonzero real number, then $a^{-1}$ denotes the inverse of $a$ with respect to $\answer[format=string]{multiplication}$.  Similarly, if $f$ is an invertible function, then $f^{-1}$ means the inverse of $f$ with respect to $\answer[format=string]{function composition}$ (two words). 
 
-We should apologize to students for the fact that in $\sin^2 x$, the exponent is about multiplication, whereas in $\sin^{-1} x$, the exponent is about function composition.  Because these notations are incompatible, some mathematicians and teachers use the notation $\arcsin x$ in place of $\sin^{-1} x$.  
-\end{remark}
+We should apologize to students for the fact that in $\sin^2 x$, the exponent is about $\answer[format=string]{multiplication}$, whereas in $\sin^{-1} x$, the exponent is about $\answer[format=string]{function composition}$.  Because these notations are incompatible, some mathematicians and teachers use the notation $\arcsin x$ in place of $\sin^{-1}x$.  
+\end{question}
 
 \begin{question}
 Give a definition of \emph{inverse function} that involves statements about function values.    
-\begin{freeResponse}
-\begin{hint}
-Given a function $f:D\rightarrow D$, a function $g:D\rightarrow D$ is the inverse of $f$ if $f(g(x)) = x$ and $g(f(x)) = x$ for all $x\in D$.  
-\end{hint}
-\end{freeResponse}
+\begin{solution}
+Given a function $f:D\rightarrow D$, a function $g:D\rightarrow D$ is the inverse of $f$ if 
+$f\left(\answer{g(x)}\right) = \answer{x}$ and $g\left(\answer{f(x)}\right) = \answer{x}$ for all $x\in D$.  
+\end{solution}
 \end{question}
 
 \textbf{A joke.}  After writing two matrices on the board, a professor asks a student, ``Are these matrices inverses?''  The student answers, ``The first one is, and the second one isn't.''  
@@ -225,7 +223,7 @@ Check that $f\circ g = I$ as follows:  $f(g(x))=f\left(\answer{x-3}\right)=\left
 \end{question}
 
 \begin{question}
-Note the way in which $g$ ``undoes'' or ``reverses'' the effect of $f$.  If we know the output of $f$ was 12, we can compute $g(12)=\answer{9}$ to know that the input to $f$ must have been 9.  
+Note the way in which $g$ ``undoes'' or ``reverses'' the effect of $f$.  If we know the output of $f$ was 12, we can compute $g(12)=\answer{9}$ to know that the for $f$ to give that output of $\answer{12}$, the input must have been $\answer{9}$.  
 \end{question}
 
 \begin{question}
