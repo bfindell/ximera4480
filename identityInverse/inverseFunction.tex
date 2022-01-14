@@ -1,0 +1,53 @@
+\documentclass[space,nooutcomes]{ximera} 
+%\documentclass[space,handout,nooutcomes]{ximera} 
+
+\title{Inverses of Functions}
+
+\begin{document}
+\begin{abstract}
+More on inverses of functions.
+\end{abstract}
+\maketitle
+
+Consider the following problem and ``solution.''
+
+\begin{problem}
+
+Express $x$ in terms of $y$ if $y = \ln x$.  
+\begin{solution}
+\begin{align*}
+y & = \ln x \\
+x & = \frac{y}{\ln} \\
+x & = \left(\frac{1}{\ln}\right)\left(y\right) \\
+x & = \ln^{-1}(y) \\
+x & = e^y
+\end{align*}
+\end{solution}
+\end{problem}
+
+\begin{problem}
+Express $x$ in terms of $y$ if $y = \ln x$.  
+\begin{solution}
+Let $f(x) = \ln x$ and $g(x) = e^x$.  Then $g^{-1}(x) = f(x)$ and $f^{-1}(x) = g(x)$.  In other words, $g^{-1} = f$ and $f^{-1}=g$.  
+
+Here is (sort-of) the reasoning:  
+\begin{align*}
+y & = \ln x \\
+y & = f(x) \\
+f^{-1}(y) & = f^{-1}(f(x)) \\
+f^{-1}(y) & = x \\
+x & = f^{-1}(y) \\
+x & = g(y) \\
+x & = e^y
+\end{align*}
+\end{solution}
+
+Note 1:  We do not use exponents for function composition for $e^x$ nor for $\ln x$.  
+
+Note 2: Because function composition is not commutative, 
+fractional notation should not be used.  Instead, stick to exponents.  
+
+\end{problem}
+
+\end{document}
+
