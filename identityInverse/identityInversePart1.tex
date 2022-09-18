@@ -187,7 +187,7 @@ and
 $\begin{bmatrix} -a&-b \\ -c&-d \end{bmatrix} + \begin{bmatrix} a&b \\ c&d \end{bmatrix} = 
 \begin{bmatrix} 0&0 \\ 0&0 \end{bmatrix}$ for all $a$, $b$, $c$, $d$. 
 
-Note that if $A = \begin{bmatrix} a&b \\ c&d \end{bmatrix}$ and $-A = \begin{bmatrix} \answer{-a}&\answer{-b} \\ \answer{-c}&\answer{-d} \end{bmatrix}$, this can be written simply:  
+Note that if $A$ and $Z$ are as in the previous question, then $-A = \begin{bmatrix} \answer{-a}&\answer{-b} \\ \answer{-c}&\answer{-d} \end{bmatrix}$, and this can be written simply:  
 \[
 A + \answer{-A} = \answer{Z}\text{ and }\answer{-A} + A = \answer{Z}. 
 \]
@@ -222,7 +222,7 @@ Matrices $A$ and $B$ are inverses of each other if $A\cdot\answer{B}=\answer{I}$
 \end{solution}
 \end{question}
 
-\textbf{A joke.}  After writing two matrices on the board, a professor asks a student, ``Are these matrices inverses?''  The student answers, ``The first one is, and the second one isn't.''  
+\subsection*{A Joke.}  After writing two matrices on the board, a professor asks a student, ``Are these matrices inverses?''  The student answers, ``The first one is, and the second one isn't.''  
 \begin{question}
 Why is this joke funny?  
 \begin{freeResponse}
@@ -235,18 +235,24 @@ The student thinks that ``inverse'' can apply to a single object, but ``inverse'
 \begin{question}
 Are there matrices that are their own (multiplicative) inverses?  If not, explain.  If so, list a few, and describe them all.
 \begin{solution}
-A matrix $A$ that is its own multiplicative inverse would be a solution to the equation $A\cdot \answer{A}=\answer{I}$ or $\answer{A^2}=I$.  There are an infinite number of matrices that satisfy this equation.  
-\begin{question}
+A matrix $A$ that is its own multiplicative inverse would be a solution to the equation $A\cdot \answer{A}=\answer{I}$ or $\answer{A^2}=I$.  
+
+This equation equation has \wordChoice{\choice{zero}\choice{exactly one}\choice{exactly two}\choice{exactly four}\choice{exactly eight}\choice{thousands of}\choice[correct]{an infinite number of}} solutions.   
+\begin{feedback}
+Correct:  There are an infinite number of matrices that satisfy this equation!
 Here are four convenient ones: 
 
 $I=\begin{bmatrix} 1&0 \\ 0&1 \end{bmatrix}$, $\begin{bmatrix} -1&0 \\ 0&1 \end{bmatrix}$, $\begin{bmatrix} 1&0 \\ 0&-1 \end{bmatrix}$, and $\begin{bmatrix} -1&0 \\ 0&-1 \end{bmatrix}=\answer{-I}$. 
-\end{question}
+\end{feedback}
 \end{solution}
 \end{question}
 
 \begin{question}
 Describe what ``identity'' and ``inverse'' mean across all of these settings.  
 \begin{freeResponse}
+\begin{hint}
+For any operation, the identity is the ``do-nothing'' element for that operation, and inverses are \text{pairs} of elements that combine (under that operation) to yield the identity element. Together, an element and its inverse combine to ``do nothing'' under that operation.  
+\end{hint}
 \end{freeResponse}
 \end{question}
 

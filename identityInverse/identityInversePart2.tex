@@ -91,7 +91,7 @@ To think about the whole function, imagine varying through all possible input va
 \section*{A Note on Notation}
 Mathematicians and teachers are sometimes sloppy regarding the notational distinction between a function value and the function as a whole, allowing $f(x)=x^2$, for example, to be taken as a statement about the whole function. 
 
-Consider the following expressions:  $f(a)$, $f(x_0)$, and $f(x)$.  Without any additional context, many mathematicians and teachers interpret the first two as particular output values, because it is customary to use the letter $a$ and the subscripted $x_0$ to denote particular values, considered one at a time and conceived as ``fixed'' while reasoning through a problem.  The expression $f(x)$, on the other hand, is ambiguous, for it sometimes denotes a particular output value, yet other times denotes the function as a whole.  
+Consider the following expressions:  $f(a)$, $f(x_0)$, and $f(x)$, all of which refer to the same function, $f$.  Without any additional context, most mathematicians and teachers interpret the first two as particular output values, because it is customary to use the letter $a$ and the subscripted $x_0$ to denote particular values, considered one at a time and conceived as ``fixed'' while reasoning through a problem.  The expression $f(x)$, on the other hand, is ambiguous, for it sometimes denotes a particular output value, yet other times denotes the function as a whole.  
 
 Some mathematicians occasionally rail at the use of  $f(x)$ for the function as a whole, while others are content that the meaning is usually clear from the context.  When specifying a function, some authors and computer algebra systems avoid the ambiguous ``specification formula'' $f(x)=x^2$ and instead use the notation $f: x\mapsto x^2$, which can be read, ``$f$ maps $x$ to $x^2$.''
 
@@ -99,7 +99,7 @@ This distinction and the ``maps to'' notation are likely too subtle when high sc
 
 
 \section*{Specifying the Operation}
-Once we consider function to be objects, we can specify an operation for combining such objects.  To reach the goal of discussing inverses of functions, we must agree that \emph{the operation is function composition}.  The open circle symbol, $\circ$, is often used to indicate function composition, so that $f\circ g$  indicates the composition of functions $f$ and $g$, taken as whole objects.  The expression $f(g(x_0))$, in contrast, is about particular function values.  The statement $(f\circ g)(x) = f(g(x))$ indicates how the two ideas are related.  
+Once we consider functions to be objects, we can specify an operation for combining such objects.  To reach the goal of discussing inverses of functions, we must agree that \emph{the operation is function composition}.  The open circle symbol, $\circ$, is often used to indicate function composition, so that $f\circ g$  indicates the composition of functions $f$ and $g$, taken as whole objects.  The expression $f(g(x_0))$, in contrast, is about particular function values.  The statement $(f\circ g)(x) = f(g(x))$ indicates how the two ideas are related.  
 
 \begin{question}
 Suppose $f: x\mapsto x^2$ and $g: x\mapsto x+3$.  Compute: 
