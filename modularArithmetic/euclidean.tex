@@ -1,0 +1,124 @@
+\documentclass[space,nooutcomes]{ximera} 
+
+\input{../preamble.tex}
+
+\title{Euclidean Algorithm}
+\author{Brad Findell}
+\begin{document}
+\begin{abstract}
+Experience building activities in using the Euclidean Algorithm.  
+\end{abstract}
+\maketitle
+
+The \emph{Euclidean Algorithm} uses the the division theorem iteratively to determine the greatest common divisor (GCD) of two integers.  In this activity, we then use the Euclidean Algorithm to express the GCD of two integers as a linear combination of those integers.  
+
+\begin{problem}
+First, some reminders: 
+
+\paragraph{Division Theorem.} Given integers $a$ and $b$ with $b\neq \answer{0}$, there exist unique integers $q$ (the $\answer[format=string]{quotient}$) and $r$ (the $\answer[format=string]{remainder}$) such that $a = \answer{qb + r}$, with $0 \leq r < \answer{b}$.]
+
+\paragraph{Definition.}
+Given integers $a$ and $b$, a \emph{linear combination} of those integers is an expression of the form $\answer{ma+nb}$, where $m$ and $n$ are also integers.  
+
+\paragraph{Definition.}
+Given integers $a$ and $b$, not both $0$, the \emph{greatest common divisor} (GCD) of $a$ and $b$ is the smallest positive integer that divides both $a$ and $b$. If $\gcd(a,b)=1$, then $a$ and $b$ are said to be $\answer[format=string]{coprime}$.  
+
+In other words, if $d=\gcd(a,b)$ then $d|a$ and $d|b$, and if $c|a$ and $c|b$ then $c<d$.  
+
+\paragraph{Theorem.}
+For integers $a$ and $b$, the smallest positive linear combination of $a$ and $b$ is equal to $\gcd(a,b)$.  
+\end{problem}
+
+
+\begin{problem}
+Sometimes it is easy (with a little mental arithmetic) to express $\gcd(a,b)$ linear combination of $a$ and $b$.  For example, 
+\begin{enumerate}
+\item $\gcd(45,18) = 9 = 1\cdot 45 - 2\cdot 18$
+\item $\gcd(14,20) = \answer{2} = \answer{3} \cdot 14 + \answer{-2} \cdot 20$
+\item $\gcd(12,5) = \answer{1} = \answer{-2} \cdot 12 + \answer{5} \cdot 5$
+\end{enumerate}
+When the numbers are larger, a guess-and-check strategy is usually not viable.  
+\end{problem}
+
+\begin{example}
+Find the GCD of 294 and 203.  Then use the calculations to express the GCD as a linear combination of those numbers.  
+
+\begin{solution}
+Here is the Euclidean Algorithm:  
+\begin{align}
+\label{eqa1} 294 & = 1\cdot 203 + 91 \\  
+\label{eqa2} 203 &= 2\cdot 91 + 21 \\
+\label{eqa3}  91  &= 4\cdot 21 + 7 \\\
+\label{eqa4}  21  &= 3\cdot 7 + 0
+\end{align}
+Because the remainder is 0 in equation (\ref{eqa4}), we can conclude the previous remainder, $7$, is the greatest common divisor of $294$ and $203$.  The original numbers and the remainders form an important sequence: $294, 203, 91, 21, 7, 0$.  It turns out $7$ is the GCD of this sequence.  
+
+Observe:  When the remainder is 0, we stop.  If the remainder is not 0, the divisor and the remainder become the new dividend and divisor, respectively, for the next step.  Because the remainders are always positive and always less than the previous remainder, the algorithm will eventually stop.  Here we used the division theorem $\answer{4}$ times.  
+
+Now, to express $7$ as a linear combination of the $294$ and $203$, we begin by solving equations (\ref{eqa1}-\ref{eqa3}) for the remainders to express each of them as a linear combination of previous numbers in the sequence:  
+\begin{align}
+\label{eqb1} 7 &=  91- 4\cdot 21 \\
+\label{eqb2} 21 &= 203 - 2\cdot 91 \\
+\label{eqb3} 91 &= 294 - 1\cdot 203
+\end{align}
+Equation (\ref{eqb2}) allows substitution for the 21 in equation (\ref{eqb1}).  By collecting ``like terms,'' the expression for the GCD can be rewritten as a linear combination of 91 and 203.
+\begin{align}
+\label{eqb4} 7 &= 91 -4\cdot (203 - 2\cdot 91) \\
+\label{eqb5}   &= -4\cdot 203 - 9\cdot 91
+\end{align} 
+Then equation (\ref{eqb3}) allows substitution for the 91 in equation (\ref{eqb5}).  Again, by collecting ``like terms,'' the expression for the GCD can be rewritten as a linear combination of 203 and 294.
+\begin{align}
+\label{eqb6} 7 &= -4\cdot 203 - 9\cdot (294 - 1\cdot 203) \\
+\label{eqb7}   &= 9\cdot 294 - 13\cdot 203
+\end{align} 
+\end{solution}
+\end{example}
+
+We can summarize the work with the following sequence of equations, working backward toward the original pair of numbers: 
+\begin{align*}
+ 7 &=  91- 4\cdot 21 \\
+    &= -4\cdot 203 - 9\cdot 91 \\
+   &= 9\cdot 294 - 13\cdot 203
+\end{align*}
+
+Now you try it!  
+
+\begin{problem}
+Use paper, pencil, and the Euclidean algorithm to find the GCD of $1001$ and $297$, which requires using the 
+division theorem $\answer{5}$ times.  
+\begin{problem}
+Correct!  The sequence of remainders is $\answer{110}, \answer{77}, \answer{33}, \answer{11}, \answer{0}$, so $\gcd(1001,297) = \answer{11}$, 
+\begin{problem}
+Correct, as shown below:  
+\begin{align}
+\label{eqc1}1001 & = \answer{3}\cdot 297 + 110 \\  
+\label{eqc2}  297 &= \answer{2}\cdot 110 + 77 \\
+\label{eqc3}  110 &= \answer{1}\cdot 77 + 33 \\\
+\label{eqc4}   77  &= \answer{2}\cdot 33 + 11 \\ 
+             33  &= \answer{3}\cdot 11 + 0
+ \end{align}
+
+And now we use these calculations to express the GCD as a linear combination of the remainders, working backward toward the original pair of numbers.  
+\begin{align*}
+11 & = \answer{1}\cdot 77 + \answer{-2} \cdot 33 \\  
+    &= \answer{-2}\cdot 110 + \answer{3} \cdot 77 \\
+    &= \answer{3}\cdot 297 + \answer{-8} \cdot 110 \\\
+    &= \answer{-8}\cdot 1001 + \answer{27} \cdot 297 \\ 
+ \end{align*}
+
+\end{problem}
+\end{problem}
+\end{problem}
+
+\begin{problem}
+Use the Euclidean Algorithm to express $\gcd(a,b)$ as a linear combination of $a$ and $b$.   
+\begin{enumerate}
+\item $\gcd(270,114) = \answer{6} = \answer{-8} \cdot 270 + \answer{19} \cdot 114$
+\item $\gcd(450,189) = \answer{9} = \answer{8}\cdot 450 + \answer{-19}\cdot 189$
+\item $\gcd(707,308) = \answer{7} = \answer{17} \cdot 707 + \answer{-39} \cdot 308$
+\end{enumerate}
+\end{problem}
+
+
+\end{document}
+
