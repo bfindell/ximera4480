@@ -1,4 +1,4 @@
-\documentclass[space,nooutcomes]{ximera} 
+\documentclass[handout,space,nooutcomes]{ximera} 
 
 \input{../preamble.tex}
 
@@ -14,28 +14,50 @@ Problems exploring DeMoivre's Theorem.
 
 %The notation cis theta is shorthand for  
 
-You have seen Euler's formula: $e^{i\theta}=\cos\theta +i\sin\theta$, which can be derived from the Taylor series for $e^{x}$, $\cos x$, and $\sin x$ by separating the real and imaginary parts of $e^{i\theta}$.  Note that because 
-$\cos^2\theta+\sin^2\theta=1$, the complex number $\cos\theta +i\sin\theta$ lies on the 
-unit circle in the complex plane.  More generally, any complex number $a+bi$ can be expressed as $r(\cos\theta +i\sin\theta)$, with $r\ge 0$.  
-
 Thinking of the complex plane as ordered pairs of real numbers, the number $a+bi$ can be represented as the point $(a,b)$ or as a vector from the origin to
 $(a,b)$.  If $a+bi = r(\cos\theta +i\sin\theta)$, for real numbers $a$, $b$, $r$, and $\theta$, then we say that the complex number has rectangular coordinates $(a,b)$ and polar coordinates $(r;\theta)$. We call $r$ the magnitude and $\theta$ the angle (or argument) of the complex number. Practice converting among these forms, particularly for special angles.
+
+\begin{problem}
+You have seen Euler's formula: $e^{i\theta}=\cos\theta +i\sin\theta$.  For a derivation of this formula, write the Taylor series for $e^{x}$, substitute $x=i\theta$, and organize the result into Taylor series for each of the real and imaginary parts.  What do you notice?  
+% $\cos x$, and $\sin x$ by separating the real and imaginary parts of $e^{i\theta}$.  
+
+\end{problem}
+
+\begin{problem}
+Let $z = \cos\theta +i\sin\theta$.  Where must $z$ lie on the complex plane for any $\theta$?
+%Note that because 
+%$\cos^2\theta+\sin^2\theta=1$, the complex number $\cos\theta +i\sin\theta$ lies on the 
+%unit circle in the complex plane.  
+%More generally, any complex number $a+bi$ can be expressed as $r(\cos\theta +i\sin\theta)$, with $r\ge 0$.  
+\end{problem}
 
 %\begin{problem}
 %Use the angle addition identity to prove DeMoivre's theorem:  .
 %\end{problem}
 
 \begin{problem}
-From the algebra of exponents, it is clear that 
+Suppose $z_1=r_1 e^{i\alpha}$ and $z_2=r_2 e^{i\beta}$, where $r_1, r_2, \alpha$, and $\beta$ are real numbers.  
+
+With Euler's formula, we can write 
+\begin{align*}
+z_1& =r_1 e^{i\alpha}= r_1 (\cos\alpha + i\sin\alpha) \text{ and } \\
+z_2& =r_2 e^{i\beta}=r_2(\cos\beta + i\sin\beta),  \text{ so } \\
+z_1 z_2 & = r_1(\cos\alpha + i\sin\alpha)r_2(\cos\beta + i\sin\beta).
+\end{align*}
+
+But this is difficult to interpret.  
+
+On the other hand, from the algebra of exponents, it follows that 
 \[
-e^{i\alpha}e^{i\beta}=e^{i(\alpha + \beta)} 
+z_1 z_2 = r_1e^{i\alpha}\cdot r_2 e^{i\beta}= r_1 r_2 e^{i(\alpha + \beta)}.  
 \]
-With Euler's formula, this identity implies that 
-\[
-r_1(\cos\alpha + i\sin\alpha)r_2(\cos\beta + i\sin\beta)
-=r_1 r_2\left(\cos(\alpha+\beta) + i\sin(\alpha+\beta)\right). 
-\]
-What does this identity tell us about the geometry of complex multiplication?  
+
+%\[
+%z_1 z_2 = r_1(\cos\alpha + i\sin\alpha)r_2(\cos\beta + i\sin\beta)
+%=r_1 r_2\left(\cos(\alpha+\beta) + i\sin(\alpha+\beta)\right). 
+%\]
+
+What these equations tell us about the geometry of complex multiplication?  
 \begin{freeResponse}
 \begin{hint}
 When multiplying complex numbers, simply multiply their magnitudes and add their angles (arguments).  
@@ -58,7 +80,8 @@ Explain, alternatively, how you could use your knowledge of trigonometry to prov
 %
 Let's step back for a moment to see whether we can generate the same understanding about complex multiplication without Euler's formula---and without trigonometry.  
 \begin{problem}
-Prove that multiplying by a complex number $w = a + bi$ is a composition of a rotation and a dilation and specify both the angle of rotation and the dilation factor.  Hints: For a generic complex number $z$, how do $za$ and $zbi$ relate to $z$?  How does $zw$ relate to $za$ and $zbi$?  
+Prove that multiplying by a complex number $w = a + bi$ is a composition of a rotation and a dilation and specify both the angle of rotation and the dilation factor.  Hints: For a generic complex number $z$, how do $za$ and $zbi$ relate to $z$?  How does $zw$ relate to $za$ and $zbi$?   Here is GeoGebra sketch that might help: 
+\url{https://www.geogebra.org/m/f3dwskkd}.  
 \end{problem}
 
 \begin{problem}
