@@ -14,36 +14,74 @@ Exploring complex numbers in polar form.
 
 % The notation $\text{cis}\theta$ is a shorthand for $\cos\theta +i\sin\theta$, sometimes used in Precalculus texts. 
 
-You have seen Euler's formula: $e^{i\theta}=\cos\theta +i\sin\theta$.  
-
-Any complex number $a+bi$ can be expressed as $r(\cos\theta +i\sin\theta)$.  Thinking of the complex plane as ordered pairs of real numbers, the number $a+bi$ can be represented as the point $(a,b)$ or as a vector from the origin to $(a,b)$.  If $a+bi = r(\cos\theta +i\sin\theta)$, for real numbers $a$, $b$, $r$, and $\theta$, then we say that the complex number has rectangular coordinates $(a,b)$ and polar coordinates $(r;\theta)$.  Practice converting among these forms, particularly for special angles.
+%You have seen Euler's formula: $e^{i\theta}=\cos\theta +i\sin\theta$.  
 
 
 \begin{problem}
+Thinking of the complex plane as ordered pairs of real numbers, the number $a+bi$ can be represented in rectangular coordinates as the point $(a,b)$ or as a vector from the origin to $(a,b)$.  
+\begin{center}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+xmin=-2.5,
+xmax=6.3,
+ymin=-2.4,
+ymax=3.4,
+%xlabel={Re($z$)},
+%ylabel={Im($z$)},
+xticklabel=\empty,
+yticklabel=\empty,]
+\clip(-2.8,-2.7) rectangle (6.5,4.);
+\draw [line width=1.2pt] (0.,0.)-- (3.48,2.1);
+\draw [line width=1.2pt] (3.48,2.1)-- (3.48,0.);
+\draw [line width=1.2pt] (0.,0.)-- (3.48,0.);
+\draw (5.4,0) node[below] {Re(z)};
+\draw (0,2.8) node[left] {Im(z)};
+\begin{scriptsize}
+\draw [fill=ududff] (3.48,2.1) circle (1.5pt);
+\draw[color=black] (4.4,2.3) node {$z=a+bi$};
+\draw[color=black] (1.64,1.25) node {$r$};
+\draw[color=black] (3.7,1.0) node {$b$};
+\draw[color=black] (1.8,-0.23) node {$a$};
+\draw[color=black] (1.12,0.31) node {$\theta$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
+\end{center}
 
+As shown in the figure, any complex number $a+bi$ can also be expressed in polar coordinates $(r;\theta)$. 
 
-$a=r\cos\theta$, $b=r\sin\theta$. 
+\begin{enumerate}
+\item Express in terms of $r$ and $\theta$:  $a=\answer{r\cos\theta}$, $b=\answer{r\sin\theta}$. 
+\item Express in terms of $a$ and $b$: $r^2=\answer{a^2+b^2}$, $\tan\theta = \answer{\frac{b}{a}}$. 
+\end{enumerate}
 
-$a^2+b^2=r^2$, $\theta = \arctan\frac{b}{a}$. 
+% $r(\cos\theta +i\sin\theta)$.  
+%If $a+bi = r(\cos\theta +i\sin\theta)$, for real numbers $a$, $b$, $r$, and $\theta$, 
 
-$e^{c+di}=e^ce^{di}=e^c(\cos d +i\sin d)$
-
-$r(\cos \theta +i\sin \theta)= re^{i\theta}=e^{\ln r}e^{i\theta}=e^{\ln r+i\theta}$
+Practice converting among these forms, particularly for special angles.
 
 \end{problem}
 
+%$e^{c+di}=e^ce^{di}=e^c(\cos d +i\sin d)$
+%$r(\cos \theta +i\sin \theta)= re^{i\theta}=e^{\ln r}e^{i\theta}=e^{\ln r+i\theta}$
+
+% Checking 
+%
+%\begin{problem}
+%Enter $1+2i+i^2$ here: $\answer{1+2i+i^2}$.
+%
+%Enter $1+2i+i^2$ here: $\answer{1+2\cdot i+i^2}$.
+%\end{problem}
+
+
 \begin{problem}
-Enter $1+2i+i^2$ here: $\answer{1+2i+i^2}$.
-
-Enter $1+2i+i^2$ here: $\answer{1+2\cdot i+i^2}$.
-\end{problem}
-
-
-\begin{problem}
-Convert the following complex numbers to polar form with $r>0$ and $0\le\theta < 2\pi$:
+Convert the following complex numbers to polar coordinates with $r>0$ and $0\le\theta < 2\pi$:
 \begin{center}
 \begin{tabular}{c | c}
-standard form & polar form \\
+standard form & polar coordinates \\
 \hline
   $i$ & $\left( \answer{1}; \answer{\pi/2} \right)$ \\
  $1 + i$  & $\left( \answer{\sqrt{2}}; \answer{\pi/4} \right)$ \\
@@ -59,10 +97,10 @@ standard form & polar form \\
 \end{problem}
 
 \begin{problem}
-Convert the following complex numbers to polar form, this time with $r>0$ and $-\pi < \theta \le \pi$:
+Convert the following complex numbers to polar coordinates, this time with $r>0$ and $-\pi < \theta \le \pi$:
 \begin{center}
 \begin{tabular}{c | c}
-standard form & polar form \\
+standard form & polar coordinates \\
 \hline
 %  $i$ & $\left( \answer{1}; \answer{\pi/2} \right)$ \\
 % $1 + i$  & $\left( \answer{\sqrt{2}}; \answer{\pi/4} \right)$ \\
@@ -85,7 +123,7 @@ Convert the following complex numbers to standard form, $a+bi$:
 
 \begin{center}
 \begin{tabular}{c | c}
-polar form & standard form \\
+polar coordinates & standard form \\
 \hline
 $(2; 30^\circ)$  & $\answer{2e^{i\pi/6}}$ \\
 $(1; 135^\circ)$ & $\answer{1e^{3i\pi/4}}$ \\
@@ -95,25 +133,43 @@ $(5; 120^\circ)$ & $\answer{5e^{2i\pi/3}}$ \\
 \end{center}
 \end{problem}
 
-\newpage 
+%\begin{problem}
+%Write $3 + 4i$, $1 + i$, and their product in polar form.  What do you notice?  
+%\end{problem}
+%
+%\begin{problem}
+%Write $(1 + i)^8$ in standard $a + bi$ form.  
+%\end{problem}
 
 \begin{problem}
-Write $3 + 4i$, $1 + i$, and their product in polar form.  What do you notice?  
-\vfill 
-\end{problem}
+%Choose a point in the complex plane, and find four different ways of using polar coordinates to describe it, using angles between $-2\pi$ and $2\pi$.  
+Which of the following representations are unique?  
+\begin{selectAll}
+\choice[correct]{A complex number in standard form}
+\choice[correct]{A complex number in rectangular coordinates}
+\choice{A complex number in polar coordinates}
+\choice{A fractional representation of a rational number}
+\end{selectAll}
+\begin{problem}
+Correct!  And we saw some examples of non-uniqueness above.  
+
+Here is another way of making statements like these: 
+
+If $a+bi=c+di$, with $a$, $b$, $c$, and $d$ real numbers, then it \wordChoice{\choice[correct]{must}\choice{need not}} follow that $a=\answer{c}$ and $b=\answer{d}$. 
+
+If $(R;\alpha) = (r;\beta)$, then it \wordChoice{\choice{must}\choice[correct]{need not}} follow that $R=\answer{r}$ and $\alpha=\answer{\beta}$. 
 
 \begin{problem}
-Write $(1 + i)^8$ in standard $a + bi$ form.  
-\vfill 
+Correct!  
+
+In contexts where both $R>0$ and $r>0$, $\alpha - \beta$ must be a multiple of $\answer{2\pi}$ radians.  
+
+But some mathematical contexts allow polar coordinates with $r<0$.  And when $r=0$, the angle can be anything!
 \end{problem}
 
-\begin{problem}
-Choose a point in the complex plane, and find four different ways of using polar coordinates to describe it, using angles between $-2\pi$ and $2\pi$.  
-Do polar coordinates uniquely label a point in the plane?
-Do rectangular coordinates uniquely label a point in the plane?
-\vfill 
 \end{problem}
 
+\end{problem}
 
 
 
